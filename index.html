@@ -1,4 +1,6 @@
-<html lang="zh-CN" data-immersive-translate-page-theme="dark"><head>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -57,12 +59,12 @@
 <body id="bodyTop">
 <div class="bottom-nav-container">
     <div class="nav-bar" id="bottomNav">
-        <div class="nav-indicator" id="indicator" style="width: 77px; left: 235px;"></div>
-        <a href="#bodyTop" class="nav-item">顶部</a>
+        <div class="nav-indicator" id="indicator"></div>
+        <a href="#bodyTop" class="nav-item active">顶部</a>
         <!-- <a href="#hxjb" class="nav-item">混淆脚本</a> --> 
         <a href="#edtfsb" class="nav-item">封神</a>
         <a href="#jiaocheng" class="nav-item">教程</a>
-        <a href="#yxym" class="nav-item active">优选</a>
+        <a href="#yxym" class="nav-item">优选</a>
         <!-- <a href="#yxym" class="nav-item">优选域名</a> -->
         <!-- <a href="#yxip" class="nav-item">优选IP</a> -->
         <!-- <a href="#yxgj" class="nav-item">优选工具</a> -->
@@ -79,14 +81,14 @@
     <div class="container">
         <header>
             <h1>Cloudflare EDT <span style="display: inline-block;">导航</span></h1>
-			<h1 id="dynamic-h1" style="font-size:1.25rem;font-weight:bold;margin-top:-12px;min-height:1.5em;"><a href="https://bestcf.pages.dev" style="color: inherit; text-decoration: none;">BestCF.pages.dev</a></h1>
+			<h1 id="dynamic-h1" style="font-size:1.25rem;font-weight:bold;margin-top:-12px;min-height:1.5em;">BestCF.pages.dev</h1>
         </header>
         <section id="kjrk">
             <!-- <h2>快捷入口</h2> --><br>
             <div class="notice-mini-card">
                 <b style="color: var(--text-main); margin-right: 8px;">最近更新</b>
                 <!-- <span style="color: var(--border-color); margin: 0 8px;">|</span> -->
-                <div class="notice-list"><span>国内测速</span><span>Trace链接</span><span>WARP MASQUE 导航</span><span>ECH配置域名合集</span><span>IP Scanner优选工具</span><span>ProxyIP合集</span></div>
+                <div class="notice-list"><span>DNS合集</span><span>国内测速</span><span>Trace链接</span><span>WARP MASQUE 导航</span><span>ECH配置域名合集</span><span>IP Scanner优选工具</span><span>ProxyIP合集</span></div>
             </div>
             <div class="group-card">
                 <div class="item-header"><span class="item-title">Cloudflare 管理面板</span><span class="tag tag-featured">互联网大善人</span></div>
@@ -105,8 +107,10 @@
                         <div class="action-area">
                             <div class="url-box">
                                 <input type="text" id="edt-url-input" placeholder="输入你的面板地址">
-                                <div id="clear-url-btn" class="clear-btn-common" onclick="clearField('edt-url-input', 'edt_panel_url')">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <div id="clear-url-btn" class="clear-btn-common"
+                                    onclick="clearField('edt-url-input', 'edt_panel_url')">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                         <line x1="18" y1="6" x2="6" y2="18"></line>
                                         <line x1="6" y1="6" x2="18" y2="18"></line>
                                     </svg>
@@ -120,8 +124,10 @@
                         <div class="action-area">
                             <div class="url-box">
                                 <input type="text" id="edt-pwd-input" placeholder="输入你的面板密码或密码提示 (选填)">
-                                <div id="clear-pwd-btn" class="clear-btn-common" onclick="clearField('edt-pwd-input', 'edt_panel_pwd')">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <div id="clear-pwd-btn" class="clear-btn-common"
+                                    onclick="clearField('edt-pwd-input', 'edt_panel_pwd')">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                                         <line x1="18" y1="6" x2="6" y2="18"></line>
                                         <line x1="6" y1="6" x2="18" y2="18"></line>
                                     </svg>
@@ -130,7 +136,9 @@
                             <button class="copy-btn" onclick="copyPwd(this)">复制密码</button>
                         </div>
                     </div>
-                    <button class="add-more-btn" onclick="addNewGroup()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <button class="add-more-btn" onclick="addNewGroup()"><svg width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round">
                             <line x1="12" y1="5" x2="12" y2="19"></line>
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                         </svg>添加更多</button>
@@ -150,12 +158,12 @@
 				<div class="item-desc">创建项目名和创建KV空间名可以同名，例如：cm-2-1-n6f3z37xmjh8-0520<br>防低级扫描，使用"小写字母" + "数字" + "-"组合，示例：cm-2-1-n6f3z37xmjh8-0520.pages.dev</div>
 				
 				<div class="action-area">
-					<div class="url-box"><span class="url-text" id="randomStringDisplay">dnwxfcqn00k8-0831</span></div>
+					<div class="url-box"><span class="url-text" id="randomStringDisplay">正在随机生成...</span></div>
 					<button class="copy-btn" id="copyRandBtn">复制名称</button>
 				</div>
 
 				<div class="action-area" style="margin-top: 10px;">
-					<div class="url-box"><span class="url-text" id="uuidDisplay">d7b26161-2a8d-4dd4-a9d6-9225bb49a3b2</span></div>
+					<div class="url-box"><span class="url-text" id="uuidDisplay">正在生成UUID...</span></div>
 					<button class="copy-btn" id="copyUuidBtn">复制UUID</button>
 				</div>
 			</div>		
@@ -171,7 +179,8 @@
 				<div class="group-name">TG电报交流群合集<span class="tag tag-featured">NEW</span></div>
 				<div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
 					<div class="url-box" style="flex: 1; min-width: 200px; padding: 0 10px;">
-						<select id="tgGroupSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+						<select id="tgGroupSelect" class="url-text"
+							style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
 							<option value="https://t.me/zhetengsha_group" style="background-color: #f1f5f9; color: #000000;">折腾啥</option>
 							<option value="https://t.me/bestip_one" style="background-color: #f1f5f9; color: #000000;">优选IP</option>
 							<option value="https://t.me/CMLiussss" style="background-color: #f1f5f9; color: #000000;">CMLiussss 技术交流群</option>
@@ -189,7 +198,7 @@
 							<option value="https://t.me/+G-veVtwBOl4wODc1" style="background-color: #f1f5f9; color: #000000;">FlClash Chat</option>
 							<option value="https://t.me/mihomo_party_group" style="background-color: #f1f5f9; color: #000000;">Clash Party 讨论群</option>
 							<option value="https://t.me/clash_verge_rev" style="background-color: #f1f5f9; color: #000000;">Clash Verge Rev 讨论群</option>
-							<option value="https://t.me/v2rayn" style="background-color: #f1f5f9; color: #000000;">v2rayN&amp;G 讨论群</option>
+							<option value="https://t.me/v2rayn" style="background-color: #f1f5f9; color: #000000;">v2rayN&G 讨论群</option>
 							<option value="https://t.me/nekoray_group" style="background-color: #f1f5f9; color: #000000;">NekoBox 讨论群</option>
 							<option value="https://t.me/feiyangdigital" style="background-color: #f1f5f9; color: #000000;">肥羊转换影音数码综合交流群</option>
 							<option value="https://t.me/ShadowrocketApp" style="background-color: #f1f5f9; color: #000000;">Shadowrocket 小火箭官方群</option>
@@ -259,7 +268,8 @@
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">github.com/yonggekkk/Cloudflare-vless-trojan</span>
                     </div>
-                    <a href="https://github.com/yonggekkk/Cloudflare-vless-trojan" class="open-btn" target="_blank">打开链接</a>
+                    <a href="https://github.com/yonggekkk/Cloudflare-vless-trojan" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
@@ -267,7 +277,8 @@
                 <div class="item-desc">第一个将配置项做成可视化图形界面面板</div>
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">github.com/bia-pain-bache/BPB-Worker-Panel</span></div>
-                    <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel" class="open-btn" target="_blank">打开链接</a>
+                    <a href="https://github.com/bia-pain-bache/BPB-Worker-Panel" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
@@ -1022,7 +1033,8 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">JieChaoCC</span><span class="tag">每2小时更新</span><span class="tag tag-featured">NEW</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">https://raw.githubusercontent.com/JieChaoCC/cf-ip-auto/refs/heads/main/data/ipapi.txt</span>
+                    <div class="url-box"><span
+                            class="url-text">https://raw.githubusercontent.com/JieChaoCC/cf-ip-auto/refs/heads/main/data/ipapi.txt</span>
                     </div>
                     <button class="copy-btn" onclick="copy(this, 'https://raw.githubusercontent.com/JieChaoCC/cf-ip-auto/refs/heads/main/data/ipapi.txt')">复制链接</button>
                 </div>
@@ -1030,7 +1042,8 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">Ahang</span><span class="tag">每日更新</span><span class="tag tag-featured">NEW</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">https://raw.githubusercontent.com/ahang39/router/refs/heads/main/all.txt</span>
+                    <div class="url-box"><span
+                            class="url-text">https://raw.githubusercontent.com/ahang39/router/refs/heads/main/all.txt</span>
                     </div>
                     <button class="copy-btn" onclick="copy(this, 'https://raw.githubusercontent.com/ahang39/router/refs/heads/main/all.txt')">复制链接</button>
                 </div>
@@ -1038,21 +1051,24 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">IRCF</span><span class="tag">每4小时更新</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">https://bestcf.pages.dev/ircf/ipv4.txt</span></div>
+                    <div class="url-box"><span
+                            class="url-text">https://bestcf.pages.dev/ircf/ipv4.txt</span></div>
                     <button class="copy-btn" onclick="copy(this, 'https://bestcf.pages.dev/ircf/ipv4.txt')">复制链接</button>
                 </div>
             </div>
             <div class="group-card">
                 <div class="item-header"><span class="item-title">Einsitang</span><span class="tag">每小时更新</span><span class="tag">单IP</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">https://raw.githubusercontent.com/einsitang/my-fast-cf-ip/refs/heads/master/fastips.txt</span></div>
+                    <div class="url-box"><span
+                            class="url-text">https://raw.githubusercontent.com/einsitang/my-fast-cf-ip/refs/heads/master/fastips.txt</span></div>
                     <button class="copy-btn" onclick="copy(this, 'https://raw.githubusercontent.com/einsitang/my-fast-cf-ip/refs/heads/master/fastips.txt')">复制链接</button>
                 </div>
             </div>
             <div class="group-card">
                 <div class="item-header"><span class="item-title">Hubbylei</span><span class="tag">每小时更新</span><span class="tag">单IP</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">https://raw.githubusercontent.com/hubbylei/bestcf/refs/heads/main/bestcf.txt</span></div>
+                    <div class="url-box"><span
+                            class="url-text">https://raw.githubusercontent.com/hubbylei/bestcf/refs/heads/main/bestcf.txt</span></div>
                     <button class="copy-btn" onclick="copy(this, 'https://raw.githubusercontent.com/hubbylei/bestcf/refs/heads/main/bestcf.txt')">复制链接</button>
                 </div>
             </div>
@@ -1066,7 +1082,8 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">天诚 4</span><span class="tag">每2小时更新</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">https://raw.githubusercontent.com/gshtwy/CF-DNS-Clone/refs/heads/main/wetest-cloudflare-v4.txt</span></div>
+                    <div class="url-box"><span
+                            class="url-text">https://raw.githubusercontent.com/gshtwy/CF-DNS-Clone/refs/heads/main/wetest-cloudflare-v4.txt</span></div>
                     <button class="copy-btn" onclick="copy(this, 'https://raw.githubusercontent.com/gshtwy/CF-DNS-Clone/refs/heads/main/wetest-cloudflare-v4.txt')">复制链接</button>
                 </div>
             </div>			
@@ -1075,16 +1092,17 @@
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">通用段 合集</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&amp;level=all&amp;port=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&amp;level=all&amp;port=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&level=all&port=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&level=all&port=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">核心段 合集</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&amp;level=p0&amp;port=random</span>
+                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&level=p0&port=random</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&amp;level=p0&amp;port=random')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&level=p0&port=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
@@ -1105,33 +1123,33 @@
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">新版One MASQUE 主段</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&amp;level=198&amp;port=random</span>
+                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&level=198&port=random</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&amp;level=198&amp;port=random')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&level=198&port=random')">复制链接</button>
                     </div>
                 </div>			
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">Gateway MASQUE 主段</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&amp;level=197&amp;port=random</span>
+                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&level=197&port=random</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&amp;level=197&amp;port=random')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&level=197&port=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">Gateway WireGuard 主段</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&amp;level=193&amp;port=random</span>
+                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&level=193&port=random</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&amp;level=193&amp;port=random')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&level=193&port=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">旧版WARP 主段</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&amp;level=192&amp;port=random</span>
+                        <div class="url-box"><span class="url-text">https://warp-masque-bestip.pages.dev/?ips=50&level=192&port=random</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&amp;level=192&amp;port=random')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://warp-masque-bestip.pages.dev/?ips=50&level=192&port=random')">复制链接</button>
                     </div>
                 </div>					
 				<div class="item-desc">说明：port=自定义端口443/8443/random；ips=自定义IP数量；level=自定义网段，p0-p3合集段从优等到次等，或198/197等具体号段，不同地区/运营商/时段，效果有差异；官方良心没有强制鉴权，不要滥用！WARP其它相关号段，欢迎自测并投稿</div>
@@ -1140,16 +1158,18 @@
 				<div class="group-name">按地区随机优选<span class="tag">每日更新</span><span class="tag">CM API</span></div>
 				<div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
 					<div class="url-box" style="flex: 2; min-width: 120px; padding: 0 10px;">
-						<select id="randRegionSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+						<select id="randRegionSelect" class="url-text"
+							style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
 							<option value="mix" style="background-color: #f1f5f9; color: #000000;">每个地区随机5个IP</option>
 							<option value="mix2" style="background-color: #f1f5f9; color: #000000;">每个地区随机10个IP</option>
-						<option value="US" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">美国 US - 1641个IP</option><option value="SE" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞典 SE - 237个IP</option><option value="NL" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">荷兰 NL - 2696个IP</option><option value="DE" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">德国 DE - 2743个IP</option><option value="GB" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">英国 GB - 972个IP</option><option value="CA" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">加拿大 CA - 46个IP</option><option value="MX" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">墨西哥 MX - 6个IP</option><option value="DO" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">多米尼加 DO - 1个IP</option><option value="IE" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">爱尔兰 IE - 12个IP</option><option value="ES" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">西班牙 ES - 109个IP</option><option value="FR" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">法国 FR - 466个IP</option><option value="BE" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">比利时 BE - 9个IP</option><option value="CH" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞士 CH - 140个IP</option><option value="AT" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">奥地利 AT - 84个IP</option><option value="DK" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">丹麦 DK - 43个IP</option><option value="CZ" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">捷克 CZ - 112个IP</option><option value="IS" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">冰岛 IS - 11个IP</option><option value="NO" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">挪威 NO - 14个IP</option><option value="IT" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">意大利 IT - 33个IP</option><option value="PL" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">波兰 PL - 173个IP</option><option value="FI" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">芬兰 FI - 1049个IP</option><option value="SK" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">斯洛伐克 SK - 6个IP</option><option value="HU" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">匈牙利 HU - 5个IP</option><option value="HR" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">克罗地亚 HR - 1个IP</option><option value="EE" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">爱沙尼亚 EE - 130个IP</option><option value="SI" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">斯洛文尼亚 SI - 1个IP</option><option value="LV" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">拉脱维亚 LV - 411个IP</option><option value="RS" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">塞尔维亚 RS - 10个IP</option><option value="RO" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">罗马尼亚 RO - 32个IP</option><option value="BY" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">白俄罗斯 BY - 8个IP</option><option value="CL" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">智利 CL - 7个IP</option><option value="BR" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">巴西 BR - 10个IP</option><option value="BG" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">保加利亚 BG - 58个IP</option><option value="LT" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">立桃宛 LT - 30个IP</option><option value="RU" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">俄罗斯 RU - 333个IP</option><option value="UA" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">乌克兰 UA - 7个IP</option><option value="PT" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">葡萄牙 PT - 1个IP</option><option value="AL" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">阿尔巴尼亚 AL - 6个IP</option><option value="MK" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">北马其顿 MK - 2个IP</option><option value="TR" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">土耳其 TR - 90个IP</option><option value="IL" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">以色列 IL - 11个IP</option><option value="CY" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">塞浦路斯 CY - 4个IP</option><option value="EG" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">埃及 EG - 1个IP</option><option value="GR" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">希腊 GR - 4个IP</option><option value="MD" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">摩尔多瓦 MD - 10个IP</option><option value="AE" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">阿联酋 AE - 13个IP</option><option value="AM" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">亚美尼亚 AM - 6个IP</option><option value="AR" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">阿根廷 AR - 2个IP</option><option value="JP" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">小日本 JP - 518个IP</option><option value="KZ" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">哈萨克斯坦 KZ - 80个IP</option><option value="GE" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">格鲁吉亚 GE - 4个IP</option><option value="SA" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">沙特 SA - 2个IP</option><option value="KG" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">吉尔吉斯斯坦 KG - 2个IP</option><option value="KR" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">韩国 KR - 106个IP</option><option value="UZ" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">乌兹别克斯坦 UZ - 1个IP</option><option value="NG" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">尼日利亚 NG - 2个IP</option><option value="NZ" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">新西兰 NZ - 1个IP</option><option value="TW" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国台湾省 TW - 23个IP</option><option value="AU" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">澳大利亚 AU - 34个IP</option><option value="IN" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">印度 IN - 48个IP</option><option value="HK" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国香港 HK - 220个IP</option><option value="MO" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国澳门 MO - 1个IP</option><option value="ZA" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">南非 ZA - 10个IP</option><option value="SG" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">新加坡 SG - 563个IP</option><option value="PH" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">菲律宾 PH - 2个IP</option><option value="MY" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">马来西亚 MY - 8个IP</option><option value="ID" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">印尼 ID - 8个IP</option><option value="TH" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">泰国 TH - 5个IP</option><option value="VN" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">越南 VN - 4个IP</option><option value="KH" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">柬埔寨 KH - 1个IP</option><option value="AZ" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">阿塞拜疆 AZ - 1个IP</option></select>
+						</select>
 					</div>
 					<div class="url-box" style="flex: 1; min-width: 80px; padding: 0 10px;">
-						<select id="randCountSelect" class="url-text" style="width: 100%; background: transparent; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; outline: none; cursor: pointer; color: var(--text-main); opacity: 1;">
+						<select id="randCountSelect" class="url-text"
+							style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
 							<option value="10" style="background-color: #f1f5f9; color: #000000;">随机10个</option>
 							<option value="20" style="background-color: #f1f5f9; color: #000000;">随机20个</option>
-							<option value="50" selected="" style="background-color: #f1f5f9; color: #000000;">随机50个</option>
+							<option value="50" selected style="background-color: #f1f5f9; color: #000000;">随机50个</option>
 							<option value="100" style="background-color: #f1f5f9; color: #000000;">随机100个</option>
 							<option value="all" style="background-color: #f1f5f9; color: #000000;">全部IP</option>
 						</select>
@@ -1159,7 +1179,9 @@
 				<div class="link-row">
 					<div class="action-area">
 						<div class="url-box" style="flex: 1; padding: 0 10px;">
-							<input type="text" id="rand-url-output" class="url-text" readonly="" style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8;" placeholder="加载中...">
+							<input type="text" id="rand-url-output" class="url-text" readonly
+								style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8;"
+								placeholder="加载中...">
 						</div>
 						<button class="copy-btn" id="randRegionCopyBtn" onclick="copyRandRegionURL()">复制链接</button>
 					</div>
@@ -1171,31 +1193,33 @@
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">三网</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://090227.pages.dev/bestcf?isp=all&amp;ips=20</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=all&amp;ips=20')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://090227.pages.dev/bestcf?isp=all&ips=20</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=all&ips=20')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">电信</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://090227.pages.dev/bestcf?isp=ct&amp;ips=50</span>
+                        <div class="url-box"><span class="url-text">https://090227.pages.dev/bestcf?isp=ct&ips=50</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=ct&amp;ips=50')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=ct&ips=50')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">联通</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://090227.pages.dev/bestcf?isp=cu&amp;ips=50</span>
+                        <div class="url-box"><span class="url-text">https://090227.pages.dev/bestcf?isp=cu&ips=50</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=cu&amp;ips=50')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=cu&ips=50')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">移动</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://090227.pages.dev/bestcf?isp=cmcc&amp;ips=50</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=cmcc&amp;ips=50')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://090227.pages.dev/bestcf?isp=cmcc&ips=50</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://090227.pages.dev/bestcf?isp=cmcc&ips=50')">复制链接</button>
                     </div>
                 </div>
 				<div class="item-desc">isp=自定义运营商；ips=自定义IP数量</div>
@@ -1205,79 +1229,89 @@
 				<div class="link-row">
                     <div class="item-header"><span class="item-title">合集</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=all&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=all&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=all&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=all&n=50&p=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">104.16.0.0/12</span><span class="tag">常用</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=104.16.0.0/12&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=104.16.0.0/12&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=104.16.0.0/12&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=104.16.0.0/12&n=50&p=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">188.114.96.0/22 (96/97/98/99)</span><span class="tag">常用</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=188.114.96.0/22&amp;n=50&amp;p=random</span>
+                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=188.114.96.0/22&n=50&p=random</span>
                         </div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=188.114.96.0/22&amp;n=50&amp;p=random')">复制链接</button>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=188.114.96.0/22&n=50&p=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">162.159.38.0/24</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=162.159.38.0/24&amp;n=50&amp;p=443</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.159.38.0/24&amp;n=50&amp;p=443')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=162.159.38.0/24&n=50&p=443</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.159.38.0/24&n=50&p=443')">复制链接</button>
                     </div>
                 </div>					
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">162.159.46.0/24</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=162.159.46.0/24&amp;n=50&amp;p=443</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.159.46.0/24&amp;n=50&amp;p=443')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=162.159.46.0/24&n=50&p=443</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.159.46.0/24&n=50&p=443')">复制链接</button>
                     </div>
                 </div>					
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">162.158.0.0/15</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=162.158.0.0/15&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.158.0.0/15&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=162.158.0.0/15&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.158.0.0/15&n=50&p=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">172.64.0.0/13</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=172.64.0.0/13&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=172.64.0.0/13&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=172.64.0.0/13&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=172.64.0.0/13&n=50&p=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">103.21.244.0/24</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=103.21.244.0/24&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=103.21.244.0/24&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=103.21.244.0/24&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=103.21.244.0/24&n=50&p=random')">复制链接</button>
                     </div>
                 </div>				
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">27.50.48.0/24</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=27.50.48.0/24&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=27.50.48.0/24&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=27.50.48.0/24&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=27.50.48.0/24&n=50&p=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">162.159.48.0/22 (48/49/50/51)</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=162.159.48.0/22&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.159.48.0/22&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=162.159.48.0/22&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=162.159.48.0/22&n=50&p=random')">复制链接</button>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">198.41.208.0/23 (208/209)</span><span class="tag">部分亚洲</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">https://randomip.pages.dev/?c=198.41.208.0/23&amp;n=50&amp;p=random</span></div>
-                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=198.41.208.0/23&amp;n=50&amp;p=random')">复制链接</button>
+                        <div class="url-box"><span
+                                class="url-text">https://randomip.pages.dev/?c=198.41.208.0/23&n=50&p=random</span></div>
+                        <button class="copy-btn" onclick="copy(this, 'https://randomip.pages.dev/?c=198.41.208.0/23&n=50&p=random')">复制链接</button>
                     </div>
                 </div>				
 				<div class="item-desc">说明：p=自定义端口443/2053/2083/2087/2096/8443/random；n=自定义IP数量(最大500)；c=自定义网段，CIDR格式或模糊匹配(例如c=162.159.38)，不同地区/运营商/时段，效果有差异；欢迎自测其它号段并投稿</div>
@@ -1293,7 +1327,8 @@
 				<div class="group-name">SUB优选订阅合集<span class="tag">支持部分EDT和订阅器</span></div>
 				<div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
 					<div class="url-box" style="flex: 1; min-width: 200px; padding: 0 10px;">
-						<select id="subBestSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+						<select id="subBestSelect" class="url-text"
+							style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
 							<option value="sub://sub.cmliussss.net#CM" style="background-color: #f1f5f9; color: #000000;">sub://sub.cmliussss.net#CM</option>
 							<option value="sub://sub.mia.xx.kg#Mia" style="background-color: #f1f5f9; color: #000000;">sub://sub.mia.xx.kg#Mia</option>
 							<option value="sub://vl.cm.soso.edu.kg#天诚1" style="background-color: #f1f5f9; color: #000000;">sub://vl.cm.soso.edu.kg#天诚1</option>
@@ -1421,7 +1456,8 @@
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">www.wetest.vip/page/cloudfront/address_v4.html</span>
                     </div>
-                    <a href="https://www.wetest.vip/page/cloudfront/address_v4.html" class="open-btn" target="_blank">打开链接</a>
+                    <a href="https://www.wetest.vip/page/cloudfront/address_v4.html" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
@@ -1482,7 +1518,8 @@
                 <div class="item-header"><span class="item-title">MB/WinCFScan</span><span class="tag">多平台</span><span class="tag">安卓</span></div>
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">github.com/MortezaBashsiz/CFScanner</span></div>
-                    <a href="https://github.com/MortezaBashsiz/CFScanner/releases" class="open-btn" target="_blank">打开链接</a>
+                    <a href="https://github.com/MortezaBashsiz/CFScanner/releases" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
@@ -1496,7 +1533,8 @@
                 <div class="item-header"><span class="item-title">Badafans/iptest</span><span class="tag">CSV格式</span></div>
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">github.com/badafans/Cloudflare-IP-SpeedTest</span></div>
-                    <a href="https://github.com/badafans/Cloudflare-IP-SpeedTest" class="open-btn" target="_blank">打开链接</a>
+                    <a href="https://github.com/badafans/Cloudflare-IP-SpeedTest" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
@@ -1601,7 +1639,8 @@
                 <div class="item-header"><span class="item-title">Xiaolin/CFS安卓优选IP</span></div>
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">github.com/xiaolin-007/CloudFlareScan</span></div>
-                    <a href="https://github.com/xiaolin-007/CloudFlareScan/releases" class="open-btn" target="_blank">打开链接</a>
+                    <a href="https://github.com/xiaolin-007/CloudFlareScan/releases" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>		
             <div class="group-card">
@@ -1652,7 +1691,8 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">测速接口</span><span class="tag">bytes可自定义</span><span class="tag">1MB≈1,000,000</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">https://speed.cloudflare.com/__down?bytes=99999999</span></div>
+                    <div class="url-box"><span
+                            class="url-text">https://speed.cloudflare.com/__down?bytes=99999999</span></div>
                     <button class="copy-btn" onclick="copy(this, 'https://speed.cloudflare.com/__down?bytes=99999999')">复制链接</button>
                 </div>
             </div>
@@ -1878,7 +1918,8 @@
                     <div class="item-header"><span class="item-title">扫描和优选脚本</span><span class="tag">不要测下载速度！</span>
                     </div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">bestcf.pages.dev/tools/CheckDomain/CheckDomain.zip</span></div>
+                        <div class="url-box"><span
+                                class="url-text">bestcf.pages.dev/tools/CheckDomain/CheckDomain.zip</span></div>
                         <a href="tools/CheckDomain/CheckDomain.zip" class="open-btn" target="_blank">下载文件</a>
                     </div>
                 </div>
@@ -1906,7 +1947,7 @@
                 </div>
             </div>
             <div class="group-card">
-                <div class="item-header"><span class="item-title">Cloudflare Colos &amp; Locations</span><span class="tag">元数据</span></div>
+                <div class="item-header"><span class="item-title">Cloudflare Colos & Locations</span><span class="tag">元数据</span></div>
                 <div class="action-area">
                     <div class="url-box"><span class="url-text">github.com/Netrvin/cloudflare-colo-list</span></div>
                     <a href="https://github.com/Netrvin/cloudflare-colo-list" class="open-btn" target="_blank">打开链接</a>
@@ -1915,23 +1956,28 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">Cloudflare IATA</span><span class="tag">元数据</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">github.com/LufsX/Cloudflare-Data-Center-IATA-Code-list</span></div>
-                    <a href="https://github.com/LufsX/Cloudflare-Data-Center-IATA-Code-list" class="open-btn" target="_blank">打开链接</a>
+                    <div class="url-box"><span
+                            class="url-text">github.com/LufsX/Cloudflare-Data-Center-IATA-Code-list</span></div>
+                    <a href="https://github.com/LufsX/Cloudflare-Data-Center-IATA-Code-list" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
                 <div class="item-header"><span class="item-title">IP Location DB</span><span class="tag">元数据</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">github.com/sapics/ip-location-db</span></div>
-                    <a href="https://github.com/sapics/ip-location-db" class="open-btn" target="_blank">打开链接</a>
+                    <div class="url-box"><span
+                            class="url-text">github.com/sapics/ip-location-db</span></div>
+                    <a href="https://github.com/sapics/ip-location-db" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>			
             <div class="group-card">
                 <div class="group-name">FOFA<span class="tag">搜索 初筛优选IP</span></div>
                 <div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
                     <div class="url-box" style="flex: 2; min-width: 120px; padding: 0 10px;">
-                        <select id="fofaISP" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
-                            <option value="all" selected="" style="background-color: #f1f5f9; color: #000000;">三网默认
+                        <select id="fofaISP" class="url-text"
+                            style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+                            <option value="all" selected style="background-color: #f1f5f9; color: #000000;">三网默认
                             </option>
                             <option value="mobile" style="background-color: #f1f5f9; color: #000000;">中国移动</option>
                             <option value="unicom" style="background-color: #f1f5f9; color: #000000;">中国联通</option>
@@ -1939,12 +1985,15 @@
                         </select>
                     </div>
                     <div class="url-box" style="flex: 2; min-width: 120px; padding: 0 10px;">
-                        <select id="fofaRegion" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);"><option value="" style="background-color:#f1f5f9;color:#000000;">不限地区（全部）</option><option value="HK" style="background-color:#f1f5f9;color:#000000;">🇭🇰 中国香港</option><option value="TW" style="background-color:#f1f5f9;color:#000000;">🇹🇼 中国台湾</option><option value="MO" style="background-color:#f1f5f9;color:#000000;">🇲🇴 中国澳门</option><option value="SG" style="background-color:#f1f5f9;color:#000000;">🇸🇬 新加坡</option><option value="JP" style="background-color:#f1f5f9;color:#000000;">🇯🇵 日本</option><option value="KR" style="background-color:#f1f5f9;color:#000000;">🇰🇷 韩国</option><option value="US" style="background-color:#f1f5f9;color:#000000;">🇺🇸 美国</option><option value="MY" style="background-color:#f1f5f9;color:#000000;">🇲🇾 马来西亚</option><option value="TH" style="background-color:#f1f5f9;color:#000000;">🇹🇭 泰国</option><option value="VN" style="background-color:#f1f5f9;color:#000000;">🇻🇳 越南</option><option value="ID" style="background-color:#f1f5f9;color:#000000;">🇮🇩 印度尼西亚</option><option value="PH" style="background-color:#f1f5f9;color:#000000;">🇵🇭 菲律宾</option><option value="IN" style="background-color:#f1f5f9;color:#000000;">🇮🇳 印度</option><option value="AU" style="background-color:#f1f5f9;color:#000000;">🇦🇺 澳大利亚</option><option value="DE" style="background-color:#f1f5f9;color:#000000;">🇩🇪 德国</option><option value="GB" style="background-color:#f1f5f9;color:#000000;">🇬🇧 英国</option><option value="FR" style="background-color:#f1f5f9;color:#000000;">🇫🇷 法国</option><option value="NL" style="background-color:#f1f5f9;color:#000000;">🇳🇱 荷兰</option><option value="ES" style="background-color:#f1f5f9;color:#000000;">🇪🇸 西班牙</option><option value="IT" style="background-color:#f1f5f9;color:#000000;">🇮🇹 意大利</option><option value="CA" style="background-color:#f1f5f9;color:#000000;">🇨🇦 加拿大</option><option value="BR" style="background-color:#f1f5f9;color:#000000;">🇧🇷 巴西</option><option value="ZA" style="background-color:#f1f5f9;color:#000000;">🇿🇦 南非</option></select>
+                        <select id="fofaRegion" class="url-text"
+                            style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+                        </select>
                     </div>
                     <div class="url-box" style="flex: 1; min-width: 80px; padding: 0 10px;">
-                        <select id="fofaPort" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+                        <select id="fofaPort" class="url-text"
+                            style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
                             <option value="standard" style="background-color: #f1f5f9; color: #000000;">全部端口</option>
-                            <option value="443" selected="" style="background-color: #f1f5f9; color: #000000;">443</option>
+                            <option value="443" selected style="background-color: #f1f5f9; color: #000000;">443</option>
                             <option value="2096" style="background-color: #f1f5f9; color: #000000;">2096</option>
                             <option value="8443" style="background-color: #f1f5f9; color: #000000;">8443</option>
                             <option value="2053" style="background-color: #f1f5f9; color: #000000;">2053</option>
@@ -1959,7 +2008,9 @@
                 <div class="link-row">
                     <div class="action-area">
                         <div class="url-box" style="flex: 1; padding: 0 10px;">
-                            <input type="text" id="fofa-command-input" class="url-text" readonly="" style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8;" placeholder="查询语句将在此生成...">
+                            <input type="text" id="fofa-command-input" class="url-text" readonly
+                                style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8;"
+                                placeholder="查询语句将在此生成...">
                         </div>
                         <button class="copy-btn" onclick="copyCommand()">复制语句</button>
                     </div>
@@ -2013,33 +2064,41 @@
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">亚洲下载速度 TOP20</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&amp;dateRange=2d&amp;location=asia&amp;locale=zh-CN&amp;metric=download&amp;ref=%2Fzh-cn%2Fquality%2Fasia</span>
+                        <div class="url-box"><span
+                                class="url-text">radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&dateRange=2d&location=asia&locale=zh-CN&metric=download&ref=%2Fzh-cn%2Fquality%2Fasia</span>
                         </div>
-                        <a href="https://radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&amp;dateRange=2d&amp;location=asia&amp;locale=zh-CN&amp;metric=download&amp;ref=%2Fzh-cn%2Fquality%2Fasia" class="open-btn" target="_blank">立即查看</a>
+                        <a href="https://radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&dateRange=2d&location=asia&locale=zh-CN&metric=download&ref=%2Fzh-cn%2Fquality%2Fasia"
+                            class="open-btn" target="_blank">立即查看</a>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">亚洲最低延迟 TOP20</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&amp;dateRange=2d&amp;location=asia&amp;locale=zh-CN&amp;metric=unloadedLatency&amp;ref=%2Fzh-cn%2Fquality%2Fasia</span>
+                        <div class="url-box"><span
+                                class="url-text">radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&dateRange=2d&location=asia&locale=zh-CN&metric=unloadedLatency&ref=%2Fzh-cn%2Fquality%2Fasia</span>
                         </div>
-                        <a href="https://radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&amp;dateRange=2d&amp;location=asia&amp;locale=zh-CN&amp;metric=unloadedLatency&amp;ref=%2Fzh-cn%2Fquality%2Fasia" class="open-btn" target="_blank">立即查看</a>
+                        <a href="https://radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&dateRange=2d&location=asia&locale=zh-CN&metric=unloadedLatency&ref=%2Fzh-cn%2Fquality%2Fasia"
+                            class="open-btn" target="_blank">立即查看</a>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">全球下载速度 TOP20</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&amp;dateRange=2d&amp;locale=zh-CN&amp;metric=download&amp;ref=%2Fzh-cn%2Fquality</span>
+                        <div class="url-box"><span
+                                class="url-text">radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&dateRange=2d&locale=zh-CN&metric=download&ref=%2Fzh-cn%2Fquality</span>
                         </div>
-                        <a href="https://radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&amp;dateRange=2d&amp;locale=zh-CN&amp;metric=download&amp;ref=%2Fzh-cn%2Fquality" class="open-btn" target="_blank">立即查看</a>
+                        <a href="https://radar.cloudflare.com/embed/QualitySpeedGeoDistribution?theme=dark&dateRange=2d&locale=zh-CN&metric=download&ref=%2Fzh-cn%2Fquality"
+                            class="open-btn" target="_blank">立即查看</a>
                     </div>
                 </div>
                 <div class="link-row">
                     <div class="item-header"><span class="item-title">各洲平均下载速度</span></div>
                     <div class="action-area">
-                        <div class="url-box"><span class="url-text">radar.cloudflare.com/embed/QualityIqiTimeseriesPerContinent?theme=dark&amp;dateRange=2d&amp;locale=zh-CN&amp;metric=bandwidth&amp;ref=%2Fzh-cn%2Fquality</span>
+                        <div class="url-box"><span
+                                class="url-text">radar.cloudflare.com/embed/QualityIqiTimeseriesPerContinent?theme=dark&dateRange=2d&locale=zh-CN&metric=bandwidth&ref=%2Fzh-cn%2Fquality</span>
                         </div>
-                        <a href="https://radar.cloudflare.com/embed/QualityIqiTimeseriesPerContinent?theme=dark&amp;dateRange=2d&amp;locale=zh-CN&amp;metric=bandwidth&amp;ref=%2Fzh-cn%2Fquality" class="open-btn" target="_blank">立即查看</a>
+                        <a href="https://radar.cloudflare.com/embed/QualityIqiTimeseriesPerContinent?theme=dark&dateRange=2d&locale=zh-CN&metric=bandwidth&ref=%2Fzh-cn%2Fquality"
+                            class="open-btn" target="_blank">立即查看</a>
                     </div>
                 </div>
                 <div class="item-desc">欢迎各路优选大神多多扫一下这些地区并投稿分享</div>
@@ -2071,15 +2130,17 @@
                 <div class="group-name">ProxyIP合集<span class="tag">大佬维护</span></div>
                 <div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
                     <div class="url-box" style="flex: 3; min-width: 200px; padding: 0 10px;">
-                        <select id="proxyipSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
-                        <option value="ProxyIP.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">CM通用 | ProxyIP.CMLiussss.net</option><option value="sjc.o00o.ooo" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">美国圣何塞 | sjc.o00o.ooo</option><option value="kr.william.us.ci" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">威廉韩国 | kr.william.us.ci</option><option value="tw.william.us.ci" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国台湾 | tw.william.us.ci</option><option value="pyip.ygkkk.dpdns.org" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">YG通用 | pyip.ygkkk.dpdns.org</option><option value="bpb.yousef.isegaro.com" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">BPB通用 | bpb.yousef.isegaro.com</option><option value="proxy.mia.xx.kg" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Mia通用 | proxy.mia.xx.kg</option><option value="ip.111000.de5.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用 | ip.111000.de5.net</option><option value="ProxyIP.HK.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国香港 | ProxyIP.HK.CMLiussss.net</option><option value="ProxyIP.SG.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">新加坡 | ProxyIP.SG.CMLiussss.net</option><option value="ProxyIP.JP.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">日本 | ProxyIP.JP.CMLiussss.net</option><option value="ProxyIP.KR.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">韩国 | ProxyIP.KR.CMLiussss.net</option><option value="ProxyIP.IN.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">印度 | ProxyIP.IN.CMLiussss.net</option><option value="ProxyIP.GB.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">英国 | ProxyIP.GB.CMLiussss.net</option><option value="ProxyIP.FR.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">法国 | ProxyIP.FR.CMLiussss.net</option><option value="ProxyIP.DE.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">德国 | ProxyIP.DE.CMLiussss.net</option><option value="ProxyIP.NL.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">荷兰 | ProxyIP.NL.CMLiussss.net</option><option value="ProxyIP.SE.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞典 | ProxyIP.SE.CMLiussss.net</option><option value="ProxyIP.FI.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">芬兰 | ProxyIP.FI.CMLiussss.net</option><option value="ProxyIP.PL.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">波兰 | ProxyIP.PL.CMLiussss.net</option><option value="ProxyIP.RU.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">俄罗斯 | ProxyIP.RU.CMLiussss.net</option><option value="ProxyIP.CH.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞士 | ProxyIP.CH.CMLiussss.net</option><option value="ProxyIP.LV.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">拉脱维亚 | ProxyIP.LV.CMLiussss.net</option><option value="ProxyIP.US.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">美国 | ProxyIP.US.CMLiussss.net</option><option value="ProxyIP.CA.CMLiussss.net" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">加拿大 | ProxyIP.CA.CMLiussss.net</option><option value="ProxyIP.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用 | ProxyIP.fxxk.dedyn.io</option><option value="ProxyIP.US.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">美国 | ProxyIP.US.fxxk.dedyn.io</option><option value="ProxyIP.SG.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">新加坡 | ProxyIP.SG.fxxk.dedyn.io</option><option value="ProxyIP.JP.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">日本 | ProxyIP.JP.fxxk.dedyn.io</option><option value="ProxyIP.HK.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国香港 | ProxyIP.HK.fxxk.dedyn.io</option><option value="ProxyIP.KR.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">韩国 | ProxyIP.KR.fxxk.dedyn.io</option><option value="ProxyIP.Aliyun.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">阿里云 | ProxyIP.Aliyun.fxxk.dedyn.io</option><option value="ProxyIP.Oracle.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">甲骨文云 | ProxyIP.Oracle.fxxk.dedyn.io</option><option value="ProxyIP.DigitalOcean.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">DigitalOcean | ProxyIP.DigitalOcean.fxxk.dedyn.io</option><option value="ProxyIP.Vultr.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Vultr | ProxyIP.Vultr.fxxk.dedyn.io</option><option value="ProxyIP.Multacom.fxxk.dedyn.io" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Multacom | ProxyIP.Multacom.fxxk.dedyn.io</option><option value="us.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">美国 | us.bestcf.eu.cc</option><option value="jp.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">日本 | jp.bestcf.eu.cc</option><option value="nl.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">荷兰 | nl.bestcf.eu.cc</option><option value="de.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">德国 | de.bestcf.eu.cc</option><option value="fr.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">法国 | fr.bestcf.eu.cc</option><option value="kr.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">韩国 | kr.bestcf.eu.cc</option><option value="hk.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国香港 | hk.bestcf.eu.cc</option><option value="sg.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">新加坡 | sg.bestcf.eu.cc</option><option value="fi.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">芬兰 | fi.bestcf.eu.cc</option><option value="gb.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">英国 | gb.bestcf.eu.cc</option><option value="tw.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国台湾 | tw.bestcf.eu.cc</option><option value="pl.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">波兰 | pl.bestcf.eu.cc</option><option value="in.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">印度 | in.bestcf.eu.cc</option><option value="ch.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞士 | ch.bestcf.eu.cc</option><option value="se.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞典 | se.bestcf.eu.cc</option><option value="ru.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">俄罗斯 | ru.bestcf.eu.cc</option><option value="lv.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">拉脱维亚 | lv.bestcf.eu.cc</option><option value="ca.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">加拿大 | ca.bestcf.eu.cc</option><option value="proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用 | proxyip.bestcf.eu.cc</option><option value="hk-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">中国香港 | hk-proxyip.bestcf.eu.cc</option><option value="us-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">美国 | us-proxyip.bestcf.eu.cc</option><option value="sg-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">新加坡 | sg-proxyip.bestcf.eu.cc</option><option value="jp-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">日本 | jp-proxyip.bestcf.eu.cc</option><option value="kr-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">韩国 | kr-proxyip.bestcf.eu.cc</option><option value="in-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">印度 | in-proxyip.bestcf.eu.cc</option><option value="gb-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">英国 | gb-proxyip.bestcf.eu.cc</option><option value="fr-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">法国 | fr-proxyip.bestcf.eu.cc</option><option value="de-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">德国 | de-proxyip.bestcf.eu.cc</option><option value="nl-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">荷兰 | nl-proxyip.bestcf.eu.cc</option><option value="se-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞典 | se-proxyip.bestcf.eu.cc</option><option value="fi-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">芬兰 | fi-proxyip.bestcf.eu.cc</option><option value="pl-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">波兰 | pl-proxyip.bestcf.eu.cc</option><option value="ru-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">俄罗斯 | ru-proxyip.bestcf.eu.cc</option><option value="ch-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">瑞士 | ch-proxyip.bestcf.eu.cc</option><option value="lv-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">拉脱维亚 | lv-proxyip.bestcf.eu.cc</option><option value="ca-proxyip.bestcf.eu.cc" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">加拿大 | ca-proxyip.bestcf.eu.cc</option></select>
+                        <select id="proxyipSelect" class="url-text"
+                            style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+                        </select>
                     </div>
                     <button id="proxyipCheckBtn" class="copy-btn">立即检测</button>
                 </div>
                 <div class="link-row">
                     <div class="action-area">
                         <div class="url-box" style="flex: 1; padding: 0 10px;">
-                            <span id="proxyipResultSpan" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8; display: inline-block;">检测结果</span>
+                            <span id="proxyipResultSpan" class="url-text"
+                                style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8; display: inline-block;">检测结果</span>
                         </div>
                         <button id="proxyipCopyBtn" class="copy-btn">复制域名</button>
                     </div>
@@ -2090,14 +2151,17 @@
                 <div class="group-name">自定义检测<span class="tag">有效性检测</span><span class="tag">CM API</span></div>
                 <div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
                     <div class="url-box" style="flex: 3; min-width: 200px; padding: 0 10px;">
-                        <input type="text" id="customProxyInput" class="url-text" placeholder="输入ProxyIP (域名或IP)" style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);" onfocus="this.placeholder=''" onblur="this.placeholder='输入ProxyIP (域名或IP)'">
+                        <input type="text" id="customProxyInput" class="url-text" placeholder="输入ProxyIP (域名或IP)"
+                            style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='输入ProxyIP (域名或IP)'">
                     </div>
                     <button id="customCheckBtn" class="copy-btn">立即检测</button>
                 </div>
                 <div class="link-row">
                     <div class="action-area">
                         <div class="url-box" style="flex: 1; padding: 0 10px;">
-                            <span id="customResultSpan" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8; display: inline-block;">检测结果</span>
+                            <span id="customResultSpan" class="url-text"
+                                style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8; display: inline-block;">检测结果</span>
                         </div>
                         <button id="customCopyBtn" class="copy-btn">复制地址</button>
                     </div>
@@ -2107,14 +2171,17 @@
                 <div class="group-name">FOFA<span class="tag">搜索 ProxyIP</span></div>
                 <div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
                     <div class="url-box" style="flex: 2; min-width: 120px; padding: 0 10px;">
-                        <select id="proxyRegion" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);"><option value="HK" style="background-color:#f1f5f9;color:#000000;">🇭🇰 中国香港</option><option value="TW" style="background-color:#f1f5f9;color:#000000;">🇹🇼 中国台湾</option><option value="MO" style="background-color:#f1f5f9;color:#000000;">🇲🇴 中国澳门</option><option value="SG" style="background-color:#f1f5f9;color:#000000;">🇸🇬 新加坡</option><option value="JP" style="background-color:#f1f5f9;color:#000000;">🇯🇵 日本</option><option value="KR" style="background-color:#f1f5f9;color:#000000;">🇰🇷 韩国</option><option value="US" style="background-color:#f1f5f9;color:#000000;">🇺🇸 美国</option><option value="DE" style="background-color:#f1f5f9;color:#000000;">🇩🇪 德国</option><option value="NL" style="background-color:#f1f5f9;color:#000000;">🇳🇱 荷兰</option><option value="GB" style="background-color:#f1f5f9;color:#000000;">🇬🇧 英国</option><option value="FR" style="background-color:#f1f5f9;color:#000000;">🇫🇷 法国</option><option value="VN" style="background-color:#f1f5f9;color:#000000;">🇻🇳 越南</option><option value="TH" style="background-color:#f1f5f9;color:#000000;">🇹🇭 泰国</option><option value="MY" style="background-color:#f1f5f9;color:#000000;">🇲🇾 马来西亚</option><option value="PH" style="background-color:#f1f5f9;color:#000000;">🇵🇭 菲律宾</option><option value="ID" style="background-color:#f1f5f9;color:#000000;">🇮🇩 印度尼西亚</option><option value="IN" style="background-color:#f1f5f9;color:#000000;">🇮🇳 印度</option><option value="AE" style="background-color:#f1f5f9;color:#000000;">🇦🇪 阿联酋</option><option value="AT" style="background-color:#f1f5f9;color:#000000;">🇦🇹 奥地利</option><option value="AU" style="background-color:#f1f5f9;color:#000000;">🇦🇺 澳大利亚</option><option value="BE" style="background-color:#f1f5f9;color:#000000;">🇧🇪 比利时</option><option value="BG" style="background-color:#f1f5f9;color:#000000;">🇧🇬 保加利亚</option><option value="BR" style="background-color:#f1f5f9;color:#000000;">🇧🇷 巴西</option><option value="BY" style="background-color:#f1f5f9;color:#000000;">🇧🇾 白俄罗斯</option><option value="CA" style="background-color:#f1f5f9;color:#000000;">🇨🇦 加拿大</option><option value="CH" style="background-color:#f1f5f9;color:#000000;">🇨🇭 瑞士</option><option value="CL" style="background-color:#f1f5f9;color:#000000;">🇨🇱 智利</option><option value="CO" style="background-color:#f1f5f9;color:#000000;">🇨🇴 哥伦比亚</option><option value="CY" style="background-color:#f1f5f9;color:#000000;">🇨🇾 塞浦路斯</option><option value="CZ" style="background-color:#f1f5f9;color:#000000;">🇨🇿 捷克</option><option value="DK" style="background-color:#f1f5f9;color:#000000;">🇩🇰 丹麦</option><option value="EE" style="background-color:#f1f5f9;color:#000000;">🇪🇪 爱沙尼亚</option><option value="EG" style="background-color:#f1f5f9;color:#000000;">🇪🇬 埃及</option><option value="ES" style="background-color:#f1f5f9;color:#000000;">🇪🇸 西班牙</option><option value="FI" style="background-color:#f1f5f9;color:#000000;">🇫🇮 芬兰</option><option value="GR" style="background-color:#f1f5f9;color:#000000;">🇬🇷 希腊</option><option value="HR" style="background-color:#f1f5f9;color:#000000;">🇭🇷 克罗地亚</option><option value="HU" style="background-color:#f1f5f9;color:#000000;">🇭🇺 匈牙利</option><option value="IE" style="background-color:#f1f5f9;color:#000000;">🇮🇪 爱尔兰</option><option value="IS" style="background-color:#f1f5f9;color:#000000;">🇮🇸 冰岛</option><option value="KH" style="background-color:#f1f5f9;color:#000000;">🇰🇭 柬埔寨</option><option value="KW" style="background-color:#f1f5f9;color:#000000;">🇰🇼 科威特</option><option value="KZ" style="background-color:#f1f5f9;color:#000000;">🇰🇿 哈萨克斯坦</option><option value="LA" style="background-color:#f1f5f9;color:#000000;">🇱🇦 老挝</option><option value="LK" style="background-color:#f1f5f9;color:#000000;">🇱🇰 斯里兰卡</option><option value="LT" style="background-color:#f1f5f9;color:#000000;">🇱🇹 立陶宛</option><option value="LU" style="background-color:#f1f5f9;color:#000000;">🇱🇺 卢森堡</option><option value="LV" style="background-color:#f1f5f9;color:#000000;">🇱🇻 拉脱维亚</option><option value="MT" style="background-color:#f1f5f9;color:#000000;">🇲🇹 马耳他</option><option value="MX" style="background-color:#f1f5f9;color:#000000;">🇲🇽 墨西哥</option><option value="NO" style="background-color:#f1f5f9;color:#000000;">🇳🇴 挪威</option><option value="NZ" style="background-color:#f1f5f9;color:#000000;">🇳🇿 新西兰</option><option value="PK" style="background-color:#f1f5f9;color:#000000;">🇵🇰 巴基斯坦</option><option value="PL" style="background-color:#f1f5f9;color:#000000;">🇵🇱 波兰</option><option value="PT" style="background-color:#f1f5f9;color:#000000;">🇵🇹 葡萄牙</option><option value="QA" style="background-color:#f1f5f9;color:#000000;">🇶🇦 卡塔尔</option><option value="RO" style="background-color:#f1f5f9;color:#000000;">🇷🇴 罗马尼亚</option><option value="RU" style="background-color:#f1f5f9;color:#000000;">🇷🇺 俄罗斯</option><option value="SA" style="background-color:#f1f5f9;color:#000000;">🇸🇦 沙特阿拉伯</option><option value="SE" style="background-color:#f1f5f9;color:#000000;">🇸🇪 瑞典</option><option value="SI" style="background-color:#f1f5f9;color:#000000;">🇸🇮 斯洛文尼亚</option><option value="SK" style="background-color:#f1f5f9;color:#000000;">🇸🇰 斯洛伐克</option><option value="TR" style="background-color:#f1f5f9;color:#000000;">🇹🇷 土耳其</option><option value="UA" style="background-color:#f1f5f9;color:#000000;">🇺🇦 乌克兰</option><option value="UZ" style="background-color:#f1f5f9;color:#000000;">🇺🇿 乌兹别克斯坦</option><option value="ZA" style="background-color:#f1f5f9;color:#000000;">🇿🇦 南非</option></select>
+                        <select id="proxyRegion" class="url-text"
+                            style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+                        </select>
                     </div>
                     <div class="url-box" style="flex: 2; min-width: 120px; padding: 0 10px;">
-                        <select id="proxyASN" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+                        <select id="proxyASN" class="url-text"
+                            style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
                             <option value="mobile" style="background-color: #f1f5f9; color: #000000;">移动线路</option>
                             <option value="unicom" style="background-color: #f1f5f9; color: #000000;">联通线路</option>
                             <option value="telecom" style="background-color: #f1f5f9; color: #000000;">电信线路</option>
-                            <option value="tier1" selected="" style="background-color: #f1f5f9; color: #000000;">一线机房
+                            <option value="tier1" selected style="background-color: #f1f5f9; color: #000000;">一线机房
                             </option>
                             <option value="tier2" style="background-color: #f1f5f9; color: #000000;">二线机房</option>
                             <option value="vps" style="background-color: #f1f5f9; color: #000000;">海外VPS</option>
@@ -2122,8 +2189,9 @@
                         </select>
                     </div>
                     <div class="url-box" style="flex: 1; min-width: 80px; padding: 0 10px;">
-                        <select id="proxyPort" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
-                            <option value="443" selected="" style="background-color: #f1f5f9; color: #000000;">443</option>
+                        <select id="proxyPort" class="url-text"
+                            style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+                            <option value="443" selected style="background-color: #f1f5f9; color: #000000;">443</option>
                             <option value="nonstandard" style="background-color: #f1f5f9; color: #000000;">非标端口</option>
                         </select>
                     </div>
@@ -2132,7 +2200,9 @@
                 <div class="link-row">
                     <div class="action-area">
                         <div class="url-box" style="flex: 1; padding: 0 10px;">
-                            <input type="text" id="proxy-command-input" class="url-text" readonly="" style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8;" placeholder="查询语句将在此生成...">
+                            <input type="text" id="proxy-command-input" class="url-text" readonly
+                                style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8;"
+                                placeholder="查询语句将在此生成...">
                         </div>
                         <button class="copy-btn" onclick="copyProxyCommand()">复制语句</button>
                     </div>
@@ -2141,9 +2211,11 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">Xgonce</span><span class="tag">每6小时更新</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">raw.githubusercontent.com/xgonce/Cloudflare_IP/refs/heads/main/result.csv</span>
+                    <div class="url-box"><span
+                            class="url-text">raw.githubusercontent.com/xgonce/Cloudflare_IP/refs/heads/main/result.csv</span>
                     </div>
-                    <a href="https://raw.githubusercontent.com/xgonce/Cloudflare_IP/refs/heads/main/result.csv" class="open-btn" target="_blank">打开链接</a>
+                    <a href="https://raw.githubusercontent.com/xgonce/Cloudflare_IP/refs/heads/main/result.csv"
+                        class="open-btn" target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
@@ -2203,7 +2275,9 @@
 				<div class="group-name">CleanIP<span class="tag">纯净度检测</span></div>
 				<div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
 					<div class="url-box" style="flex: 3; min-width: 200px; padding: 0 10px;">
-						<input type="text" id="cleanIpInput" class="url-text" placeholder="请输入IP" style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);" onfocus="this.placeholder=''" onblur="this.placeholder='请输入IP'">
+						<input type="text" id="cleanIpInput" class="url-text" placeholder="请输入IP"
+							style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);"
+							onfocus="this.placeholder=''" onblur="this.placeholder='请输入IP'">
 					</div>
 					<button id="cleanIpBtn" class="copy-btn">立即检测</button>
 				</div>
@@ -2213,7 +2287,9 @@
                 <div class="group-name">IPPure<span class="tag">纯净度检测</span></div>
                 <div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
                     <div class="url-box" style="flex: 3; min-width: 200px; padding: 0 10px;">
-                        <input type="text" id="ipInput" class="url-text" placeholder="请输入IP" style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);" onfocus="this.placeholder=''" onblur="this.placeholder='请输入IP'">
+                        <input type="text" id="ipInput" class="url-text" placeholder="请输入IP"
+                            style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);"
+                            onfocus="this.placeholder=''" onblur="this.placeholder='请输入IP'">
                     </div>
                     <button id="detectBtn" class="copy-btn">立即检测</button>
                 </div>
@@ -2224,7 +2300,9 @@
 				<div class="group-name">Scamalytics<span class="tag">纯净度检测</span></div>
 				<div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
 					<div class="url-box" style="flex: 3; min-width: 200px; padding: 0 10px;">
-						<input type="text" id="ScamalyticsInput" class="url-text" placeholder="请输入IP" style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);" onfocus="this.placeholder=''" onblur="this.placeholder='请输入IP'">
+						<input type="text" id="ScamalyticsInput" class="url-text" placeholder="请输入IP"
+							style="width: 100%; background: transparent; border: none; outline: none; color: var(--text-main);"
+							onfocus="this.placeholder=''" onblur="this.placeholder='请输入IP'">
 					</div>
 					<button id="ScamalyticsIpBtn" class="copy-btn">立即检测</button>
 				</div>
@@ -2491,7 +2569,7 @@
 							<option value="1minutes" style="background-color: #f1f5f9; color: #000000;">每 1分钟自动测速 | 适合有小于 20个优选 (变态)</option>
 							<option value="5minutes" style="background-color: #f1f5f9; color: #000000;">每 5分钟自动测速 | 适合有小于100个优选 (原版)</option>
 							<option value="10minutes" style="background-color: #f1f5f9; color: #000000;">每10分钟自动测速 | 适合有100-200个优选</option>
-							<option value="15minutes" selected="" style="background-color: #f1f5f9; color: #000000;">每15分钟自动测速 | 适合有200-300个优选 (平衡)</option>
+							<option value="15minutes" selected style="background-color: #f1f5f9; color: #000000;">每15分钟自动测速 | 适合有200-300个优选 (平衡)</option>
 							<option value="30minutes" style="background-color: #f1f5f9; color: #000000;">每30分钟自动测速 | 适合有300-500个优选</option>
 							<option value="60minutes" style="background-color: #f1f5f9; color: #000000;">每60分钟自动测速 | 适合有小于1000个优选</option>
 							<option value="120minutes" style="background-color: #f1f5f9; color: #000000;">每 2小时自动测速 | 适合优质稳定的优选</option>
@@ -2544,7 +2622,9 @@
 				</div>
 				<div class="action-area" style="gap: 10px;">
 					<div class="url-box" style="flex: 1; padding: 0 10px;">
-						<select id="subconfigSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);"><option value="https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 常规规则</option><option value="https://subweb.s3.fr-par.scw.cloud/RemoteConfig/special/phaors.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 PharosPro无测速</option><option value="https://raw.githubusercontent.com/OoHHHHHHH/ini/master/config.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 OoHHHHHHH</option><option value="https://raw.githubusercontent.com/OoHHHHHHH/ini/master/cfw-tap.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 CFW-TAP</option><option value="https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-full.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 lhl77全分组（定期更新）</option><option value="https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-mini-gfw.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 lhl77简易版（定期更新）</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_new.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 ConnersHua 神机规则 Outbound</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_backtocn.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 ConnersHua 神机规则 Inbound 回国专用</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/lhie1_clash.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 lhie1 洞主规则（使用 Clash 分组规则）</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/lhie1_dler.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 lhie1 洞主规则完整版</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/ehpo1_main.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 eHpo1 规则</option><option value="https://raw.githubusercontent.com/Mazeorz/airports/master/Clash/Examine.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 品云专属配置（仅香港区域分组）</option><option value="https://raw.githubusercontent.com/Mazeorz/airports/master/Clash/Examine_Full.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 品云专属配置（全地域分组）</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/nzw9314_custom.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 nzw9314 规则</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/maicoo-l_custom.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 maicoo-l 规则</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/dlercloud_lige_platinum.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 DlerCloud Platinum 李哥定制规则</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/dlercloud_lige_gold.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 DlerCloud Gold 李哥定制规则</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/dlercloud_lige_silver.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 DlerCloud Silver 李哥定制规则</option><option value="https://unpkg.com/proxy-script/config/Clash/clash.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 ProxyStorage自用</option><option value="https://github.com/UlinoyaPed/ShellClash/raw/master/rules/ShellClash.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">全网搜集规则 ShellClash修改版规则 (by UlinoyaPed)</option><option value="https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/convenience.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 LinkCube</option><option value="https://raw.githubusercontent.com/SleepyHeeead/subconverter-config/master/remote-config/customized/xianyu.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 咸鱼</option><option value="https://raw.githubusercontent.com/Mazeorz/airports/master/Clash/SSRcloud.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 CNIX</option><option value="https://raw.githubusercontent.com/Mazetsz/ACL4SSR/master/Clash/config/V2rayPro.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 Nirvana</option><option value="https://raw.githubusercontent.com/Mazeorz/airports/master/Clash/V2Pro.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 V2Pro</option><option value="https://raw.githubusercontent.com/Mazeorz/airports/master/Clash/Stitch.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 史迪仔-自动测速</option><option value="https://raw.githubusercontent.com/Mazeorz/airports/master/Clash/Stitch-Balance.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 史迪仔-负载均衡</option><option value="https://raw.githubusercontent.com/SleepyHeeead/subconverter-config/master/remote-config/customized/maying.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 Maying</option><option value="https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/ytoo.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 Ytoo</option><option value="https://raw.githubusercontent.com/SleepyHeeead/subconverter-config/master/remote-config/customized/nyancat.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 NyanCAT</option><option value="https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/nexitally.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 Nexitally</option><option value="https://raw.githubusercontent.com/SleepyHeeead/subconverter-config/master/remote-config/customized/socloud.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 SoCloud</option><option value="https://raw.githubusercontent.com/SleepyHeeead/subconverter-config/master/remote-config/customized/ark.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 ARK</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/n3ro_optimized.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 N3RO</option><option value="https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/scholar_optimized.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 Scholar</option><option value="https://subweb.s3.fr-par.scw.cloud/RemoteConfig/customized/flower.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">各大机场规则 Flowercloud</option><option value="https://raw.githubusercontent.com/szkane/ClashRuleSet/main/Clash/kclash.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 kclash.ini</option><option value="https://raw.githubusercontent.com/liandu2024/clash/main/Cash-All.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 Cash-All.ini</option><option value="https://raw.githubusercontent.com/liandu2024/clash/main/Clash-Full.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 Clash-Full.ini</option><option value="https://raw.githubusercontent.com/liandu2024/clash/main/Clash-LIAN.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 Clash-LIAN.ini</option><option value="https://raw.githubusercontent.com/liandu2024/clash/main/Clash-S01.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 Clash-S01.ini</option><option value="https://raw.githubusercontent.com/liandu2024/clash/main/Clash-mini.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 Clash-mini.ini</option><option value="https://raw.githubusercontent.com/liandu2024/clash/main/proxy/clash-all-globe-noicon.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 clash-all-globe-noicon.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/ShellClash.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 ShellClash.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/ShellClash_Mini.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 ShellClash_Mini.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/ShellClash_Block.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 ShellClash_Block.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/ShellClash_Nano.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 ShellClash_Nano.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/ShellClash_Full.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 ShellClash_Full.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/ShellClash_Full_Block.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 ShellClash_Full_Block.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/lhie1_clash.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 lhie1_clash.ini</option><option value="https://raw.githubusercontent.com/juewuy/ShellCrash/dev/rules/lhie1_dler.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 lhie1_dler.ini</option><option value="https://raw.githubusercontent.com/DustinWin/ruleset_geodata/master/rule_templates/DustinWin_Full.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 DustinWin_Full.ini</option><option value="https://raw.githubusercontent.com/DustinWin/ruleset_geodata/master/rule_templates/DustinWin_Full_NoAds.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 DustinWin_Full_NoAds.ini</option><option value="https://raw.githubusercontent.com/DustinWin/ruleset_geodata/master/rule_templates/DustinWin_Lite.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 DustinWin_Lite.ini</option><option value="https://raw.githubusercontent.com/DustinWin/ruleset_geodata/master/rule_templates/DustinWin_Lite_NoAds.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 DustinWin_Lite_NoAds.ini</option><option value="https://raw.githubusercontent.com/DustinWin/ruleset_geodata/master/rule_templates/DustinWin_Blacklist_NoAds.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 DustinWin_Blacklist_NoAds.ini</option><option value="https://raw.githubusercontent.com/DustinWin/ruleset_geodata/master/rule_templates/DustinWin_Light.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 DustinWin_Light.ini</option><option value="https://raw.githubusercontent.com/DustinWin/ruleset_geodata/master/rule_templates/DustinWin_Nano.ini" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">通用配置 DustinWin_Nano.ini</option></select>
+						<select id="subconfigSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+							<option value="" style="background-color: #f1f5f9; color: #94a3b8;">加载中...</option>
+						</select>
 					</div>
 					<button class="copy-btn" id="subconfigCopyBtn" onclick="subconfigCopyURL()">复制链接</button>
 				</div>
@@ -2580,8 +2660,10 @@
             <div class="group-card">
                 <div class="item-header"><span class="item-title">Johnshall</span><span class="tag">小火箭</span></div>
                 <div class="action-area">
-                    <div class="url-box"><span class="url-text">github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever</span></div>
-                    <a href="https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever" class="open-btn" target="_blank">打开链接</a>
+                    <div class="url-box"><span
+                            class="url-text">github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever</span></div>
+                    <a href="https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever" class="open-btn"
+                        target="_blank">打开链接</a>
                 </div>
             </div>
             <div class="group-card">
@@ -2827,15 +2909,17 @@
 				<div class="group-name">ECH配置 SNI域名合集<span class="tag">隐藏真实SNI</span><span class="tag">三体API</span></div>
 				<div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
 					<div class="url-box" style="flex: 3; min-width: 200px; padding: 0 10px;">
-						<select id="echDomainSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
-						<option value="cloudflare-ech.com" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Cloudflare官方 ECH | cloudflare-ech.com</option><option value="cloudflare.dev" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Cloudflare官方 开发者 | cloudflare.dev</option><option value="research.cloudflare.com" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Cloudflare官方 研究团队 | research.cloudflare.com</option><option value="crypto.cloudflare.com" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Cloudflare官方 加密服务 | crypto.cloudflare.com</option><option value="dshield.org" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">DShield安全防护 | dshield.org</option><option value="iucn.org" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">IUCN自然保护联盟 | iucn.org</option><option value="cni.org" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">CNI网络信息组织 | cni.org</option><option value="annals.org" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Annals内科医学期刊 | annals.org</option><option value="job.com" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">Job招聘求职 | job.com</option><option value="tinyurl.com" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">TinyURL短链服务 | tinyurl.com</option><option value="www.britannica.com" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">不列颠百科全书 | www.britannica.com</option><option value="for.edu.sg" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">新加坡教育工具 | for.edu.sg</option><option value="umy.ac.id" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">穆罕默迪亚大学 | umy.ac.id</option><option value="su.edu.ph" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">西利曼大学 | su.edu.ph</option><option value="uet.edu.pk" style="background-color: rgb(241, 245, 249); color: rgb(0, 0, 0);">拉合尔工程技术大学 | uet.edu.pk</option></select>
+						<select id="echDomainSelect" class="url-text"
+							style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+						</select>
 					</div>
 					<button id="echCheckBtn" class="copy-btn">立即检测</button>
 				</div>			
 				<div class="link-row">
 					<div class="action-area">
 						<div class="url-box" style="flex: 1; padding: 0 10px;">
-							<span id="echResultSpan" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8; display: inline-block;">检测结果</span>
+							<span id="echResultSpan" class="url-text"
+								style="width: 100%; background: transparent; border: none; outline: none; color: #94a3b8; opacity: 0.8; display: inline-block;">检测结果</span>
 						</div>
 						<button id="echCopyBtn" class="copy-btn">复制域名</button>
 					</div>
@@ -2848,7 +2932,36 @@
                     <div class="url-box"><span class="url-text">bestcf.eu.cc/tools/ech/</span></div>
                     <a href="https://bestcf.eu.cc/tools/ech/" class="open-btn" target="_blank">打开链接</a>
                 </div>
-            </div>				
+            </div>
+			<div class="group-card">
+				<div class="group-name">远程 IPv4/6 DNS合集<span class="tag tag-featured">NEW</span></div>
+				<div class="action-area" style="gap: 10px; flex-wrap: wrap; margin-bottom: 12px;">
+					<div class="url-box" style="flex: 1; min-width: 200px; padding: 0 10px;">
+						<style>.url-text option { background-color: #f1f5f9; color: #000000; padding: 4px 8px; }</style>
+						<select id="publicDNSSelect" class="url-text" style="width: 100%; background: transparent; border: none; outline: none; cursor: pointer; color: var(--text-main);">
+							<option value="1.1.1.1">CloudFlare | 1.1.1.1 | 私密/不过滤 (推荐)</option>
+							<option value="8.8.8.8">Google | 8.8.8.8 | 私密/不过滤 (推荐)</option>
+							<option value="9.9.9.9">Quad9 | 9.9.9.9 | 私密/安全/防恶意 (推荐)</option>
+							<option value="208.67.222.222">OpenDNS | 208.67.222.222 | 防恶意/可过滤</option>
+							<option value="199.85.126.20">诺顿DNS | 199.85.126.20 | 防恶意/集成杀软</option>
+							<option value="94.140.14.14">AdGuard | 94.140.14.14 | 去广告/隐私</option>
+							<option value="185.228.168.168">CleanBrowsing | 185.228.168.168 | 私密/安全/防成人</option>
+							<option value="77.88.8.7">Yandex DNS | 77.88.8.7 | 防恶意/毛子常用</option>
+							<option value="8.26.56.26">Comodo DNS | 8.26.56.26 | 防恶意</option>
+							<option value="1.0.0.1">Cloudflare 备用 | 1.0.0.1 | 隐私/不过滤</option>
+							<option value="8.8.4.4">Google 备用 | 8.8.4.4 | 私密/不过滤</option>
+							<option value="149.112.112.112">Quad9 备用 | 149.112.112.112 | 私密/安全/防恶意</option>
+							<option value="2606:4700:4700::1111">CloudFlare IPv6 | 2606:4700:4700::1111 | 私密/不过滤</option>
+							<option value="2001:4860:4860::8888">Google IPv6 | 2001:4860:4860::8888 | 私密/不过滤</option>
+							<option value="2620:fe::fe">Quad9 IPv6 | 2620:fe::fe | 私密/安全/防恶意</option>
+						</select>
+					</div>
+					<button class="copy-btn" id="publicDNSCopyBtn" onclick="publicDNSCopyURL()">复制DNS</button>
+				</div>
+				<div class="item-desc">另外直连DNS，优先阿里云223.5.5.5，腾讯生态比如游戏党用119.29.29.29</div>
+			</div>
+			<script>function publicDNSCopyURL(){const e=document.getElementById("publicDNSSelect"),t=document.getElementById("publicDNSCopyBtn");if(e&&t&&e.value){const n=document.createElement("textarea");n.value=e.value,document.body.appendChild(n),n.select();try{if(document.execCommand("copy")){const e=t.innerText;t.innerText="成功复制",setTimeout(()=>{t.innerText=e},1500)}}catch(e){console.error(e)}finally{document.body.removeChild(n)}}}document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementById("publicDNSSelect");if(e&&e.options.length>0){e.selectedIndex=0}}));</script>
+							
             <div class="group-card">
                 <div class="item-header"><span class="item-title">JS脚本混淆</span><span class="tag">某些脚本可能有兼容问题</span></div>
                 <div class="action-area">
@@ -2957,23 +3070,23 @@
                     <table class="client-table">
                         <thead><tr><th>应用名</th><th>Win</th><th>And</th><th>Mac</th><th>iOS</th></tr></thead>
                         <tbody>
-							<tr><td><span class="client-name">v2rayN</span></td><td class="status-check">✔︎</td><td class="status-none">-</td><td class="status-check">✔︎</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">Clash Verge</span></td><td class="status-check">✔︎</td><td class="status-none">-</td><td class="status-check">✔︎</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">FlClash</span></td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">SingBox</span></td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td></tr>
-							<tr><td><span class="client-name">Throne</span></td><td class="status-check">✔︎</td><td class="status-none">-</td><td class="status-check">✔︎</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">Clash Party</span></td><td class="status-check">✔︎</td><td class="status-none">-</td><td class="status-check">✔︎</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">CMFA</span></td><td class="status-none">-</td><td class="status-check">✔︎</td><td class="status-none">-</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">v2rayNG</span></td><td class="status-none">-</td><td class="status-check">✔︎</td><td class="status-none">-</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">Clash Mi</span></td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td></tr>
-							<tr><td><span class="client-name">Karing</span></td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td></tr>
-							<tr><td><span class="client-name">Happ</span></td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td></tr>
+							<tr><td><span class="client-name">v2rayN</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">Clash Verge</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">FlClash</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">SingBox</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>
+							<tr><td><span class="client-name">Throne</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">Clash Party</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">CMFA</span></td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">v2rayNG</span></td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">Clash Mi</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>
+							<tr><td><span class="client-name">Karing</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>
+							<tr><td><span class="client-name">Happ</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>
 							<!-- <tr><td><span class="client-name">ClashX Meta</span></td><td class="status-none">-</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr> -->
 							<!-- <tr><td><span class="client-name">NekoBox</span></td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-none">-</td></tr> -->
-							<tr><td><span class="client-name">Pandora Box</span></td><td class="status-check">✔︎</td><td class="status-none">-</td><td class="status-check">✔︎</td><td class="status-none">-</td></tr>
-							<tr><td><span class="client-name">Bettbox</span></td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">Pandora Box</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
+							<tr><td><span class="client-name">Bettbox</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-none">-</td></tr>
 							<!-- <tr><td><span class="client-name">Clash Plus</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>   -->
-							<tr><td><span class="client-name">Hiddify</span></td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td><td class="status-check">✔︎</td></tr>  
+							<tr><td><span class="client-name">Hiddify</span></td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td><td class="status-check">✔&#xFE0E;</td></tr>  
                         </tbody>
                     </table>
                 </div>
@@ -2981,14 +3094,14 @@
             <div class="group-card">
                 <div class="group-name">Windows</div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">v2rayN</span><span class="tag tag-featured tag-version">7.24.8</span><span class="tag">9天前</span></div>
+                    <div class="item-header"><span class="item-title">v2rayN</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/2dust/v2rayN</span></div>
                         <a href="https://github.com/2dust/v2rayN/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Clash Verge Rev</span><span class="tag tag-featured tag-version">2.5.2</span><span class="tag">42天前</span></div>
+                    <div class="item-header"><span class="item-title">Clash Verge Rev</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/clash-verge-rev/clash-verge-rev</span>
                         </div>
@@ -2996,28 +3109,28 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Clash Party</span><span class="tag tag-featured tag-version">2.0.2</span><span class="tag">17天前</span><span class="tag">含Smart内核</span></div>
+                    <div class="item-header"><span class="item-title">Clash Party</span><span class="tag">含Smart内核</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/mihomo-party-org/clash-party</span></div>
                         <a href="https://github.com/mihomo-party-org/clash-party/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Throne (Nekoray)</span><span class="tag tag-featured tag-version">1.2.4</span><span class="tag">22天前</span></div>
+                    <div class="item-header"><span class="item-title">Throne (Nekoray)</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/throneproj/Throne</span></div>
                         <a href="https://github.com/throneproj/Throne/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Sparkle</span><span class="tag tag-featured tag-version">1.26.7</span><span class="tag">31天前</span></div>
+                    <div class="item-header"><span class="item-title">Sparkle</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/xishang0128/sparkle</span></div>
                         <a href="https://github.com/xishang0128/sparkle/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">FlowZ</span><span class="tag tag-featured tag-version">4.3.3</span><span class="tag">5天前</span></div>
+                    <div class="item-header"><span class="item-title">FlowZ</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/dododook/FlowZ</span>
                         </div>
@@ -3025,14 +3138,14 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">GUI.for.SingBox</span><span class="tag tag-featured tag-version">1.26.1</span><span class="tag">41天前</span></div>
+                    <div class="item-header"><span class="item-title">GUI.for.SingBox</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/GUI-for-Cores/GUI.for.SingBox</span></div>
                         <a href="https://github.com/GUI-for-Cores/GUI.for.SingBox/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">GUI.for.Clash</span><span class="tag tag-featured tag-version">1.26.1</span><span class="tag">41天前</span></div>
+                    <div class="item-header"><span class="item-title">GUI.for.Clash</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/GUI-for-Cores/GUI.for.Clash</span>
                         </div>
@@ -3040,28 +3153,28 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">v2rayA</span><span class="tag tag-featured tag-version">2.4.16</span><span class="tag">5天前</span></div>
+                    <div class="item-header"><span class="item-title">v2rayA</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/v2rayA/v2rayA</span></div>
                         <a href="https://github.com/v2rayA/v2rayA/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">GenyConnect</span><span class="tag tag-featured tag-version">1.4.894</span><span class="tag">35天前</span></div>
+                    <div class="item-header"><span class="item-title">GenyConnect</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/genyleap/GenyConnect</span></div>
                         <a href="https://github.com/genyleap/GenyConnect/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Pandora Box</span><span class="tag tag-featured tag-version">1.0.23</span><span class="tag">9天前</span></div>
+                    <div class="item-header"><span class="item-title">Pandora Box</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/snakem982/Pandora-Box</span></div>
                         <a href="https://github.com/snakem982/Pandora-Box/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Sing-Box Windows</span><span class="tag tag-featured tag-version">2.3.1</span><span class="tag">75天前</span></div>
+                    <div class="item-header"><span class="item-title">Sing-Box Windows</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/xinggaoya/sing-box-windows</span></div>
                         <a href="https://github.com/xinggaoya/sing-box-windows/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3075,14 +3188,14 @@
                     <!-- </div> -->
                 <!-- </div>					 -->
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Shadowsocks</span><span class="tag tag-featured tag-version">4.4.1.0</span><span class="tag">1665天前</span><span class="tag">仅支持SS</span></div>
+                    <div class="item-header"><span class="item-title">Shadowsocks</span><span class="tag">仅支持SS</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/shadowsocks/shadowsocks-windows</span></div>
                         <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">SingBox (SFW)</span><span class="tag tag-featured tag-version">1.14.0</span><span class="tag tag-featured">今天有更新</span><span class="tag">官方</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">SingBox (SFW)</span><span class="tag">官方</span><span class="tag">NEW</span></div>
 					<div class="item-desc">安装文件为SFW / 源码：github.com/SagerNet/sing-box-for-desktop</div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/SagerNet/sing-box</span></div>
@@ -3090,56 +3203,56 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Swell</span><span class="tag tag-featured tag-version">3.3.3</span><span class="tag tag-featured">今天有更新</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">Swell</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/yaog6700-bit/Swell-Proxy</span></div>
                         <a href="https://github.com/yaog6700-bit/Swell-Proxy/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>					
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">XrayUI</span><span class="tag tag-featured tag-version">1.18</span><span class="tag">36天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">XrayUI</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/PhoenixNil/XrayUI-dev</span></div>
                         <a href="https://github.com/PhoenixNil/XrayUI-dev/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>						
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">GoclashZ</span><span class="tag tag-featured tag-version">1.2.4</span><span class="tag">21天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">GoclashZ</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Zzz-IT/GoclashZ</span></div>
                         <a href="https://github.com/Zzz-IT/GoclashZ/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Sloth Clash</span><span class="tag tag-featured tag-version">0.9.1</span><span class="tag">22天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">Sloth Clash</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Nemu-x/SlothClash</span></div>
                         <a href="https://github.com/Nemu-x/SlothClash/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Stelliberty</span><span class="tag tag-featured tag-version">2.0.29</span><span class="tag tag-featured">昨天有更新</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">Stelliberty</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Kindness-Kismet/stelliberty</span></div>
                         <a href="https://github.com/Kindness-Kismet/stelliberty/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Zephyr</span><span class="tag tag-featured tag-version">2.4.4</span><span class="tag">9天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">Zephyr</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Juwan-Hwang/Zephyr</span></div>
                         <a href="https://github.com/Juwan-Hwang/Zephyr/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Flowvy</span><span class="tag tag-featured tag-version">0.3.5</span><span class="tag">4天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">Flowvy</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/flowvy-proxy/desktop</span></div>
                         <a href="https://github.com/flowvy-proxy/desktop/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">NyameBox</span><span class="tag tag-featured tag-version">5.11.28.3</span><span class="tag">4天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">NyameBox</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/qr243vbi/nekobox</span></div>
                         <a href="https://github.com/qr243vbi/nekobox/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3156,14 +3269,14 @@
             <div class="group-card">
                 <div class="group-name">安卓 Android</div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">FlClash</span><span class="tag tag-featured tag-version">0.8.96</span><span class="tag">14天前</span></div>
+                    <div class="item-header"><span class="item-title">FlClash</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/chen08209/FlClash</span></div>
                         <a href="https://github.com/chen08209/FlClash/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">CMFA</span><span class="tag tag-featured tag-version">2.11.33</span><span class="tag">15天前</span><span class="tag">mihomo团队</span></div>
+                    <div class="item-header"><span class="item-title">CMFA</span><span class="tag">mihomo团队</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/MetaCubeX/ClashMetaForAndroid</span>
                         </div>
@@ -3171,21 +3284,21 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">SingBox</span><span class="tag tag-featured tag-version">1.14.0</span><span class="tag tag-featured">今天有更新</span></div>
+                    <div class="item-header"><span class="item-title">SingBox</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/SagerNet</span></div>
                         <a href="https://github.com/SagerNet/sing-box/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">v2rayNG</span><span class="tag tag-featured tag-version">2.2.6</span><span class="tag">57天前</span></div>
+                    <div class="item-header"><span class="item-title">v2rayNG</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/2dust/v2rayNG</span></div>
                         <a href="https://github.com/2dust/v2rayNG/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">NekoBox</span><span class="tag tag-featured tag-version">1.4.2</span><span class="tag">203天前</span></div>
+                    <div class="item-header"><span class="item-title">NekoBox</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/MatsuriDayo/NekoBoxForAndroid</span>
                         </div>
@@ -3193,49 +3306,49 @@
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Karing</span><span class="tag tag-featured tag-version">1.2.23.2606</span><span class="tag">26天前</span></div>
+                    <div class="item-header"><span class="item-title">Karing</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/KaringX/karing</span></div>
                         <a href="https://github.com/KaringX/karing/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Hiddify</span><span class="tag tag-featured tag-version">4.1.1</span><span class="tag">178天前</span></div>
+                    <div class="item-header"><span class="item-title">Hiddify</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/hiddify/hiddify-next</span></div>
                         <a href="https://github.com/hiddify/hiddify-next/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Bettbox</span><span class="tag tag-featured tag-version">1.18.10</span><span class="tag">14天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">Bettbox</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/appshubcc/Bettbox</span></div>
                         <a href="https://github.com/appshubcc/Bettbox/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Slclash</span><span class="tag tag-featured tag-version">2.1.2</span><span class="tag">6天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">Slclash</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/songzhengpei/Slclash</span></div>
                         <a href="https://github.com/songzhengpei/Slclash/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>			
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">FlClashX</span><span class="tag tag-featured tag-version">0.4.2</span><span class="tag">44天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">FlClashX</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/pluralplay/FlClashX</span></div>
                         <a href="https://github.com/pluralplay/FlClashX/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">FlyClash</span><span class="tag tag-featured tag-version">0.2.1.8-Alpha</span><span class="tag">29天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">FlyClash</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/GtxFury/FlyClash-Android</span></div>
                         <a href="https://github.com/GtxFury/FlyClash-Android/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Surfboard</span><span class="tag tag-featured tag-version">mobile-2.34.3</span><span class="tag">6天前</span><span class="tag">不支持Vless</span>
+                    <div class="item-header"><span class="item-title">Surfboard</span><span class="tag">不支持Vless</span>
                     </div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/getsurfboard/surfboard</span></div>
@@ -3243,7 +3356,7 @@
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Shadowsocks</span><span class="tag tag-featured tag-version">5.3.5-nightly</span><span class="tag">202天前</span><span class="tag">仅支持SS</span></div>
+                    <div class="item-header"><span class="item-title">Shadowsocks</span><span class="tag">仅支持SS</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/shadowsocks/shadowsocks-android</span></div>
                         <a href="https://github.com/shadowsocks/shadowsocks-android/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3251,7 +3364,7 @@
                 </div>				
             </div>
             <div class="group-card">
-                <div id="harmony-up" class="group-name">鸿蒙 HarmonyOS<span class="tag tag-featured">当前总装机量约8237.92万台 今日+18.3万台</span></div>
+                <div id="harmony-up" class="group-name">鸿蒙 HarmonyOS</div>
 				<script>window.addEventListener('load',function(){fetch('https://harmony-up.pages.dev/up2.txt?t='+Date.now()).then(r=>r.ok?r.text():'').then(t=>{var v=t.trim(),el=document.getElementById('harmony-up');if(v&&el){var s=document.createElement('span');s.className='tag tag-featured';var p=v.split('|');var txt='当前总装机量约'+p[0]+'万台';if(p.length>1){txt+= ' 今日+'+p[1]+'万台';}s.textContent=txt;el.appendChild(s);}}).catch(()=>{});});</script>
 				<div class="link-row">
                     <div class="item-header"><span class="item-title">ClashBox (AppGallery免签)</span></div>
@@ -3261,21 +3374,21 @@
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">ClashBox (Github)</span><span class="tag tag-featured tag-version">1.7.4</span><span class="tag">151天前</span></div>
+                    <div class="item-header"><span class="item-title">ClashBox (Github)</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/xiaobaigroup/ClashBox</span></div>
                         <a href="https://github.com/xiaobaigroup/ClashBox/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">CMFA 改包名版</span><span class="tag tag-featured tag-version">2.11.27-meta-harmony-r1</span><span class="tag">98天前</span><span class="tag">APK</span></div>
+                    <div class="item-header"><span class="item-title">CMFA 改包名版</span><span class="tag">APK</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/RoperYoung/clash-mihomo-for-haymonyos</span></div>
                         <a href="https://github.com/RoperYoung/clash-mihomo-for-haymonyos/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">ClashHM</span><span class="tag tag-featured tag-version">0.1.0</span><span class="tag">45天前</span></div>
+                    <div class="item-header"><span class="item-title">ClashHM</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/maxin0324/ClashHM</span></div>
                         <a href="https://github.com/maxin0324/ClashHM/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3310,7 +3423,7 @@
                     <!-- </div> -->
                 <!-- </div> -->
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">侧载工具 Auto-Installer</span><span class="tag tag-featured tag-version">3.1.0</span><span class="tag">159天前</span></div>
+                    <div class="item-header"><span class="item-title">侧载工具 Auto-Installer</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/likuai2010/auto-installer</span></div>
                         <a href="https://github.com/likuai2010/auto-installer/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3331,7 +3444,7 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">安装工具 HoKit</span><span class="tag tag-featured tag-version">1.8.7</span><span class="tag tag-featured">昨天有更新</span></div>
+                    <div class="item-header"><span class="item-title">安装工具 HoKit</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/yabi-zzh/HoKit</span></div>
                         <a href="https://github.com/yabi-zzh/HoKit/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3363,7 +3476,7 @@
             <div class="group-card">
                 <div class="group-name">macOS</div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Clash Verge Rev</span><span class="tag tag-featured tag-version">2.5.2</span><span class="tag">42天前</span></div>
+                    <div class="item-header"><span class="item-title">Clash Verge Rev</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/clash-verge-rev/clash-verge-rev</span>
                         </div>
@@ -3371,56 +3484,56 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">V2rayU</span><span class="tag tag-featured tag-version">5.2.0</span><span class="tag">29天前</span></div>
+                    <div class="item-header"><span class="item-title">V2rayU</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/yanue/v2rayu</span></div>
                         <a href="https://github.com/yanue/v2rayu/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">ClashX.Meta</span><span class="tag tag-featured tag-version">1.4.44</span><span class="tag">15天前</span><span class="tag">mihomo团队</span></div>
+                    <div class="item-header"><span class="item-title">ClashX.Meta</span><span class="tag">mihomo团队</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/MetaCubeX/ClashX.Meta</span></div>
                         <a href="https://github.com/MetaCubeX/ClashX.Meta/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">v2rayN</span><span class="tag tag-featured tag-version">7.24.8</span><span class="tag">9天前</span></div>
+                    <div class="item-header"><span class="item-title">v2rayN</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/2dust/v2rayN</span></div>
                         <a href="https://github.com/2dust/v2rayN/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Clash Hako</span><span class="tag tag-featured tag-version">1.0.6</span><span class="tag">2天前</span></div>
+                    <div class="item-header"><span class="item-title">Clash Hako</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6794257189</span></div>
                         <a href="https://apps.apple.com/us/app/clash-rule-based-proxy-utility/id6794257189" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Throne (Nekoray NekoBox)</span><span class="tag tag-featured tag-version">1.2.4</span><span class="tag">22天前</span></div>
+                    <div class="item-header"><span class="item-title">Throne (Nekoray NekoBox)</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/throneproj/Throne</span></div>
                         <a href="https://github.com/throneproj/Throne/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>					
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Happ</span><span class="tag tag-featured tag-version">4.1.2</span><span class="tag">3天前</span></div>
+                    <div class="item-header"><span class="item-title">Happ</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Happ-proxy/happ-desktop</span></div>
                         <a href="https://github.com/Happ-proxy/happ-desktop/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">ClashMac</span><span class="tag tag-featured tag-version">27.1.2</span><span class="tag">46天前</span></div>
+                    <div class="item-header"><span class="item-title">ClashMac</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/666OS/ClashMac</span></div>
                         <a href="https://github.com/666OS/ClashMac/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">ClashBar</span><span class="tag tag-featured tag-version">0.3.2</span><span class="tag">43天前</span><span class="tag">NEW</span></div>
+                    <div class="item-header"><span class="item-title">ClashBar</span><span class="tag">NEW</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Sitoi/ClashBar</span></div>
                         <a href="https://github.com/Sitoi/ClashBar/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3431,35 +3544,35 @@
             <div class="group-card">
                 <div class="group-name">iOS<span class="tag">需要外区账号</span><span class="tag">多数不开源</span></div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Shadowrocket 小火箭</span><span class="tag tag-featured tag-version">2.2.90</span><span class="tag">55天前</span><span class="tag">$2.99</span></div>
+                    <div class="item-header"><span class="item-title">Shadowrocket 小火箭</span><span class="tag">$2.99</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id932747118</span></div>
                         <a href="https://apps.apple.com/us/app/id932747118" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Loon</span><span class="tag tag-featured tag-version">3.5.0</span><span class="tag">67天前</span></div>
+                    <div class="item-header"><span class="item-title">Loon</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id1373567447</span></div>
                         <a href="https://apps.apple.com/us/app/id1373567447" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Stash</span><span class="tag tag-featured tag-version">3.4.1</span><span class="tag">46天前</span></div>
+                    <div class="item-header"><span class="item-title">Stash</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id1596063349</span></div>
                         <a href="https://apps.apple.com/us/app/id1596063349" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Quantumult X 圈</span><span class="tag tag-featured tag-version">1.7.0</span><span class="tag">15天前</span></div>
+                    <div class="item-header"><span class="item-title">Quantumult X 圈</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id1443988620</span></div>
                         <a href="https://apps.apple.com/us/app/id1443988620" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Surge</span><span class="tag tag-featured tag-version">5.21.1</span><span class="tag">20天前</span><span class="tag">$49.99</span><span class="tag">不支持Vless</span>
+                    <div class="item-header"><span class="item-title">Surge</span><span class="tag">$49.99</span><span class="tag">不支持Vless</span>
                     </div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id1442620678</span></div>
@@ -3467,77 +3580,77 @@
                     </div>
                 </div>							
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Clash Mi</span><span class="tag tag-featured tag-version">1.0.28.1406</span><span class="tag">20天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Clash Mi</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6744321968</span></div>
                         <a href="https://apps.apple.com/us/app/id6744321968" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>			
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Karing</span><span class="tag tag-featured tag-version">1.2.23.2607</span><span class="tag">19天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Karing</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6472431552</span></div>
                         <a href="https://apps.apple.com/us/app/id6472431552" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Sing-box MT</span><span class="tag tag-featured tag-version">1.14.4</span><span class="tag tag-featured">今天有更新</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Sing-box MT</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6785326793</span></div>
                         <a href="https://apps.apple.com/us/app/id6785326793" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>					
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Hiddify</span><span class="tag tag-featured tag-version">4.0</span><span class="tag">193天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Hiddify</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6596777532</span></div>
                         <a href="https://apps.apple.com/us/app/id6596777532" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Egern</span><span class="tag tag-featured tag-version">2.20.0</span><span class="tag">39天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Egern</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id1616105820</span></div>
                         <a href="https://apps.apple.com/us/app/id1616105820" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Clash Lite</span><span class="tag tag-featured tag-version">1.0.11</span><span class="tag">43天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Clash Lite</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6761357475</span></div>
                         <a href="https://apps.apple.com/us/app/id6761357475" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">LinkClashX</span><span class="tag tag-featured tag-version">1.1.9</span><span class="tag">12天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">LinkClashX</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6757075299</span></div>
                         <a href="https://apps.apple.com/us/app/id6757075299" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Anywhere Proxy</span><span class="tag tag-featured tag-version">2.0</span><span class="tag">32天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Anywhere Proxy</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6758235178</span></div>
                         <a href="https://apps.apple.com/us/app/id6758235178" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Happ</span><span class="tag tag-featured tag-version">5.6.0</span><span class="tag">11天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Happ</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6504287215</span></div>
                         <a href="https://apps.apple.com/us/app/id6504287215" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">INCY</span><span class="tag tag-featured tag-version">2.5.5</span><span class="tag tag-featured">昨天有更新</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">INCY</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6756943388</span></div>
                         <a href="https://apps.apple.com/us/app/id6756943388" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Everywhere Proxy</span><span class="tag tag-featured tag-version">1.5</span><span class="tag">30天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Everywhere Proxy</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6766003090</span></div>
                         <a href="https://apps.apple.com/us/app/id6766003090" class="open-btn" target="_blank">打开链接</a>
@@ -3551,21 +3664,21 @@
                     <!-- </div> -->
                 <!-- </div>				 -->
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">OneXray</span><span class="tag tag-featured tag-version">26.8.4</span><span class="tag">7天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">OneXray</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6745748773</span></div>
                         <a href="https://apps.apple.com/us/app/id6745748773" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Streisand</span><span class="tag tag-featured tag-version">1.6.75</span><span class="tag">48天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Streisand</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6450534064</span></div>
                         <a href="https://apps.apple.com/us/app/id6450534064" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Clash Plus</span><span class="tag tag-featured tag-version">1.3.8</span><span class="tag">25天前</span><span class="tag">免费</span></div>
+                    <div class="item-header"><span class="item-title">Clash Plus</span><span class="tag">免费</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">apps.apple.com/us/app/id6774378761</span></div>
                         <a href="https://apps.apple.com/us/app/id6774378761" class="open-btn" target="_blank">打开链接</a>
@@ -3575,7 +3688,7 @@
             <div class="group-card">
                 <div class="group-name">路由器 Router</div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">PassWall</span><span class="tag tag-featured tag-version">26.8.26-1</span><span class="tag">5天前</span></div>
+                    <div class="item-header"><span class="item-title">PassWall</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Openwrt-Passwall/openwrt-passwall</span>
                         </div>
@@ -3583,7 +3696,7 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">PassWall 2</span><span class="tag tag-featured tag-version">26.8.27-1</span><span class="tag">4天前</span></div>
+                    <div class="item-header"><span class="item-title">PassWall 2</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/Openwrt-Passwall/openwrt-passwall2</span>
                         </div>
@@ -3591,14 +3704,14 @@
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">OpenClash</span><span class="tag tag-featured tag-version">0.47.156</span><span class="tag">21天前</span></div>
+                    <div class="item-header"><span class="item-title">OpenClash</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/vernesong/OpenClash</span></div>
                         <a href="https://github.com/vernesong/OpenClash" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">SingBox</span><span class="tag tag-featured tag-version">1.14.0</span><span class="tag tag-featured">今天有更新</span></div>
+                    <div class="item-header"><span class="item-title">SingBox</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/SagerNet</span></div>
                         <a href="https://github.com/SagerNet/sing-box/releases" class="open-btn" target="_blank">打开链接</a>
@@ -3678,42 +3791,49 @@
             <div class="group-card">
                 <div class="group-name">内核 Core</div>               
 				<div class="link-row">
-                    <div class="item-header"><span class="item-title">Xray</span><span class="tag tag-featured tag-version">26.3.27</span><span class="tag">156天前</span></div>
+                    <div class="item-header"><span class="item-title">Xray</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/XTLS/Xray-core</span></div>
                         <a href="https://github.com/XTLS/Xray-core" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Mihomo (Clash Meta)</span><span class="tag tag-featured tag-version">1.19.30</span><span class="tag">15天前</span></div>
+                    <div class="item-header"><span class="item-title">Mihomo (Clash Meta)</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/MetaCubeX/mihomo</span></div>
                         <a href="https://github.com/MetaCubeX/mihomo" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Mihomo-Smart</span><span class="tag tag-featured tag-version">Pre-release</span></div>
+                    <div class="item-header"><span class="item-title">Mihomo-Smart</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/vernesong/mihomo</span></div>
                         <a href="https://github.com/vernesong/mihomo/releases" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>				
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">Sing-Box</span><span class="tag tag-featured tag-version">1.14.0</span><span class="tag tag-featured">今天有更新</span></div>
+                    <div class="item-header"><span class="item-title">Sing-Box</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/SagerNet/sing-box</span></div>
                         <a href="https://github.com/SagerNet/sing-box" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
                 <div class="link-row">
-                    <div class="item-header"><span class="item-title">V2ray</span><span class="tag tag-featured tag-version">5.53.0</span><span class="tag">28天前</span></div>
+                    <div class="item-header"><span class="item-title">SingBox-Extended</span></div>
+                    <div class="action-area">
+                        <div class="url-box"><span class="url-text">github.com/shtorm-7/sing-box-extended</span></div>
+                        <a href="https://github.com/shtorm-7/sing-box-extended/releases" class="open-btn" target="_blank">打开链接</a>
+                    </div>
+                </div>					
+                <div class="link-row">
+                    <div class="item-header"><span class="item-title">V2ray</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/v2fly/v2ray-core</span></div>
                         <a href="https://github.com/v2fly/v2ray-core" class="open-btn" target="_blank">打开链接</a>
                     </div>
                 </div>
 				<div class="link-row">
-                    <div class="item-header"><span class="item-title">Shadowsocks Rust</span><span class="tag tag-featured tag-version">1.25.0</span><span class="tag">4天前</span></div>
+                    <div class="item-header"><span class="item-title">Shadowsocks Rust</span></div>
                     <div class="action-area">
                         <div class="url-box"><span class="url-text">github.com/shadowsocks/shadowsocks-rust</span></div>
                         <a href="https://github.com/shadowsocks/shadowsocks-rust" class="open-btn" target="_blank">打开链接</a>
@@ -3948,5 +4068,5 @@ document.addEventListener("DOMContentLoaded",async()=>{const t=document.getEleme
 <!-- Analysis -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-');</script> --><!--<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7e1b43291202481fa1859f9f681eb5ef"}'></script> -->
 <script>(function(_0x1,_0x2){var _0x3=['\x68\x6f\x73\x74\x6e\x61\x6d\x65','\x69\x6e\x63\x6c\x75\x64\x65\x73','\x62\x65\x73\x74\x63\x66\x2e\x70\x61\x67\x65\x73\x2e\x64\x65\x76','\x63\x66\x62\x65\x73\x74\x2e\x70\x61\x67\x65\x73\x2e\x64\x65\x76','\x62\x65\x73\x74\x63\x66\x2e\x7a\x78\x64\x6c\x2e\x65\x75\x2e\x63\x63','\x62\x65\x73\x74\x63\x66\x2e\x63\x66\x6d\x6f\x66\x61\x2e\x65\x75\x2e\x63\x63','\x6c\x6f\x63\x61\x6c\x68\x6f\x73\x74','\x31\x32\x37\x2e\x30\x2e\x30\x2e\x31','\x70\x72\x6f\x74\x6f\x63\x6f\x6c','\x66\x69\x6c\x65\x3a','\x72\x65\x70\x6c\x61\x63\x65','\x68\x74\x74\x70\x73\x3a\x2f\x2f\x62\x65\x73\x74\x63\x66\x2e\x70\x61\x67\x65\x73\x2e\x64\x65\x76','\x69\x6e\x6e\x65\x72\x54\x65\x78\x74','\x63\x6c\x69\x70\x62\x6f\x61\x72\x64','\x77\x72\x69\x74\x65\x54\x65\x78\x74','\x61\x64\x64','\x72\x65\x6d\x6f\x76\x65','\x73\x75\x63\x63\x65\x73\x73','\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64','\x64\x79\x6e\x61\x6d\x69\x63\x2d\x68\x31','\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74','\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c\x64','\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c','\x71\x75\x65\x72\x79\x53\x65\x6c\x65\x63\x74\x6f\x72','\x68\x31','\x69\x6e\x73\x65\x72\x74\x42\x65\x66\x6f\x72\x65','\x6e\x65\x78\x74\x53\x69\x62\x6c\x69\x6e\x67'];var _0x4=['\u6210\u529f\u590d\u5236','\u5931\u8d25'];var _0x5=[_0x3[2],_0x3[3],_0x3[4],_0x3[5],_0x3[6],_0x3[7]],_0x6=_0x1.location;var _0x7=atob('QmVzdENGLnBhZ2VzLmRldg==');_0x1.copy=async function(_0x8,_0x9){var _0xa=_0x8[_0x3[12]];try{if(navigator[_0x3[13]]&&navigator[_0x3[13]][_0x3[14]]){await navigator[_0x3[13]][_0x3[14]](_0x9);_0x8[_0x3[12]]=_0x4[0];_0x8.classList[_0x3[15]](_0x3[17]);setTimeout(function(){_0x8[_0x3[12]]=_0xa;_0x8.classList[_0x3[16]](_0x3[17]);},1000);return;}var _0xb=_0x2[_0x3[20]]('textarea');_0xb.value=_0x9;_0xb.style.position='fixed';_0xb.style.top='-9999px';_0xb.style.left='-9999px';_0x2.body[_0x3[21]](_0xb);_0xb[_0x3[12]]();var _0xc=_0x2[_0x3[16]]('copy');_0x2.body[_0x3[16]](_0xb);if(_0xc){_0x8[_0x3[12]]=_0x4[0];_0x8.classList[_0x3[15]](_0x3[17]);setTimeout(function(){_0x8[_0x3[12]]=_0xa;_0x8.classList[_0x3[16]](_0x3[17]);},1000);}else{throw new Error('execCommand failed');}}catch(_0xd){_0x8[_0x3[12]]=_0x4[1];setTimeout(function(){_0x8[_0x3[12]]=_0xa;},1000);}};var _0xe=function(){var _0xf=_0x2[_0x3[20]]('a');_0xf.href='https://'+_0x7.toLowerCase();_0xf[_0x3[12]]=_0x7;_0xf.style='color:inherit;text-decoration:none;';return _0xf;},_0x10=_0x2[_0x3[18]](_0x3[19]);if(_0x10){_0x10[_0x3[22]]='';_0x10[_0x3[21]](_0xe());}else{var _0x11=_0x2[_0x3[23]](_0x3[24]);if(_0x11){var _0x12=_0x2[_0x3[20]](_0x3[24]);_0x12.style='font-size:1.25rem;font-weight:bold;margin-top:-12px;';_0x12[_0x3[21]](_0xe());_0x11.parentNode[_0x3[25]](_0x12,_0x11[_0x3[26]]);}}if((!_0x5[_0x3[1]](_0x6[_0x3[0]])&&_0x6[_0x3[0]]!=='\x62\x65\x73\x74\x63\x66\x2e\x65\x75\x2e\x63\x63')||_0x1.self!==_0x1.top){if(_0x6[_0x3[8]]!==_0x3[9])_0x1.top.location[_0x3[10]](_0x3[11]);}})(window,document);</script>
-<!-- Cloudflare Pages Analytics --><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;91d54db1e2fa4db3b387bd339f56edf9&quot;}"></script><!-- Cloudflare Pages Analytics -->
-</body><div id="immersive-translate-browser-popup" style="all: initial"></div></html>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "91d54db1e2fa4db3b387bd339f56edf9"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>
