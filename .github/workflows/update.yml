@@ -2,9 +2,8 @@ name: Daily Update index.html
 
 on:
   schedule:
-    # 每天 UTC 时间 0:15 (北京时间 8:00) 自动运行
-    - cron: '15 0 * * *'
-  # 支持手动在 GitHub 页面触发运行
+    # 每天 UTC 0:00 (北京时间 08:00) 运行
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
@@ -17,20 +16,29 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fetch Latest index.html
+      - name: Fetch and Compare
         run: |
-          curl -sL https://bestcf.pages.dev/index.html -o index.html
+          # 1. 下载远程最新文件到临时位置
+          curl -sL https://bestcf.pages.dev/index.html -o index.html.tmp
+
+          # 2. 检查本地是否存在 index.html 且内容是否完全相同
+          if [ -f index.html ] && cmp -s index.html index.html.tmp; then
+            echo "远程文件与本地文件完全一致，跳过覆盖和提交。"
+            rm index.html.tmp
+            # 设置标记供后续步骤判断，或者直接退出
+            echo "HAS_CHANGES=false" >> $GITHUB_ENV
+          else
+            echo "发现文件更新或本地文件不存在，进行覆写。"
+            mv index.html.tmp index.html
+            echo "HAS_CHANGES=true" >> $GITHUB_ENV
+          fi
 
       - name: Commit and Push Changes
+        if: env.HAS_CHANGES == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
           git add index.html
-          # 仅在文件有变化时提交，避免无意义的记录
-          if ! git diff --staged --quiet; then
-            git commit -m "chore: auto-update index.html [skip ci]"
-            git push
-          else
-            echo "No changes detected."
-          fi
+          git commit -m "chore: auto-update index.html [skip ci]"
+          git push
