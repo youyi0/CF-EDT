@@ -16,21 +16,42 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fetch, Remove Obfuscated Redirect and Compare
+      - name: Fetch, Validate and Remove Obfuscated Redirect
         run: |
-          # 1. 下载远程最新文件
-          curl -sL "https://bestcf.pages.dev/index.html" -o index.html.tmp
+          # 1. 下载远程最新文件（-f 遇 4xx/5xx 报错直接返回非 0）
+          if ! curl -sLf "https://bestcf.pages.dev/index.html" -o index.html.tmp; then
+            echo "错误：下载远程文件失败（网络问题或源站异常），取消覆写。"
+            rm -f index.html.tmp
+            echo "HAS_CHANGES=false" >> $GITHUB_ENV
+            exit 0
+          fi
 
-          # 2. 精准删除包含混淆跳转逻辑的那一行 script
+          # 2. 检查文件是否为空
+          if [ ! -s index.html.tmp ]; then
+            echo "错误：下载的文件为空，取消覆写。"
+            rm -f index.html.tmp
+            echo "HAS_CHANGES=false" >> $GITHUB_ENV
+            exit 0
+          fi
+
+          # 3. 校验关键内容特征（防伪装页/被篡改/被替换）
+          if ! grep -q -i "Cloudflare EDT" index.html.tmp; then
+            echo "警告：远程页面内容不符合特征（可能已变成伪装页或删除了原项目内容），取消覆写！"
+            rm -f index.html.tmp
+            echo "HAS_CHANGES=false" >> $GITHUB_ENV
+            exit 0
+          fi
+
+          # 4. 精准删除包含混淆跳转逻辑的那一行 script
           sed -i '/QmVzdENGLnBhZ2VzLmRldg==/d' index.html.tmp
 
-          # 3. 比对与覆盖
+          # 5. 比对与覆盖
           if [ -f index.html ] && cmp -s index.html index.html.tmp; then
             echo "文件无变化，跳过提交。"
-            rm index.html.tmp
+            rm -f index.html.tmp
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
           else
-            echo "检测到更新，覆写本地文件。"
+            echo "检测到正常更新，覆写本地文件。"
             mv index.html.tmp index.html
             echo "HAS_CHANGES=true" >> $GITHUB_ENV
           fi
@@ -42,5 +63,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           
           git add index.html
-          git commit -m "chore: auto-update and delete redirect script"
+          git commit -m "chore: auto-update and remove redirect script"
           git push
