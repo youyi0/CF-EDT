@@ -16,19 +16,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fetch and Compare
+      - name: Fetch, Replace Domain and Compare
         run: |
-          # 1. 下载远程最新文件到临时位置
+          # 1. 下载远程最新文件
           curl -sL https://bestcf.pages.dev/index.html -o index.html.tmp
 
-          # 2. 检查本地是否存在 index.html 且内容是否完全相同
+          # 2. 将原作者域名替换为你自己的域名
+          sed -i 's/bestcf\.pages\.dev/cyh1.eu.cc/g' index.html.tmp
+
+          # 3. 比对与覆盖
           if [ -f index.html ] && cmp -s index.html index.html.tmp; then
-            echo "远程文件与本地文件完全一致，跳过覆盖和提交。"
+            echo "文件无变化，跳过提交。"
             rm index.html.tmp
-            # 设置标记供后续步骤判断，或者直接退出
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
           else
-            echo "发现文件更新或本地文件不存在，进行覆写。"
+            echo "检测到更新，覆写本地文件。"
             mv index.html.tmp index.html
             echo "HAS_CHANGES=true" >> $GITHUB_ENV
           fi
@@ -40,5 +42,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           
           git add index.html
-          git commit -m "chore: auto-update index.html [skip ci]"
+          git commit -m "chore: auto-update and replace domain [skip ci]"
           git push
