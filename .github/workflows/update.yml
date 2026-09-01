@@ -1,0 +1,36 @@
+name: Daily Update index.html
+
+on:
+  schedule:
+    # 每天 UTC 时间 0:15 (北京时间 8:00) 自动运行
+    - cron: '15 0 * * *'
+  # 支持手动在 GitHub 页面触发运行
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Latest index.html
+        run: |
+          curl -sL https://bestcf.pages.dev/index.html -o index.html
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add index.html
+          # 仅在文件有变化时提交，避免无意义的记录
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: auto-update index.html [skip ci]"
+            git push
+          else
+            echo "No changes detected."
+          fi
