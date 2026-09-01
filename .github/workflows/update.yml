@@ -16,20 +16,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Fetch, Clean Redirects and Replace Domain
+      - name: Fetch, Remove Obfuscated Redirect and Compare
         run: |
           # 1. 下载远程最新文件
           curl -sL "https://bestcf.pages.dev/index.html" -o index.html.tmp
 
-          # 2. 全量替换源域名为你自己的域名 (忽略大小写)
-          sed -i 's/bestcf\.pages\.dev/cyh1.eu.cc/gI' index.html.tmp
+          # 2. 精准删除包含混淆跳转逻辑的那一行 script
+          sed -i '/QmVzdENGLnBhZ2VzLmRldg==/d' index.html.tmp
 
-          # 3. 移除/禁用代码中可能存在的 window.location 赋值跳转语句
-          sed -i 's/window\.location\.href\s*=/;\/\/ window.location.href =/gI' index.html.tmp
-          sed -i 's/window\.location\.replace/;\/\/ window.location.replace/gI' index.html.tmp
-          sed -i 's/location\.href\s*=/;\/\/ location.href =/gI' index.html.tmp
-
-          # 4. 比对与覆盖
+          # 3. 比对与覆盖
           if [ -f index.html ] && cmp -s index.html index.html.tmp; then
             echo "文件无变化，跳过提交。"
             rm index.html.tmp
@@ -47,5 +42,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           
           git add index.html
-          git commit -m "chore: auto-update and neutralize domain redirect [skip ci]"
+          git commit -m "chore: auto-update and delete redirect script [skip ci]"
           git push
