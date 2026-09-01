@@ -21,8 +21,8 @@ jobs:
           # 1. 下载远程最新文件
           curl -sL https://bestcf.pages.dev/index.html -o index.html.tmp
 
-          # 2. 将原作者域名替换为你自己的域名
-          sed -i 's/bestcf\.pages\.dev/cyh1.eu.cc/g' index.html.tmp
+          # 2. 全量忽略大小写替换原作者域名为你的域名
+          sed -i 's/bestcf\.pages\.dev/cyh1.eu.cc/gI' index.html.tmp
 
           # 3. 比对与覆盖
           if [ -f index.html ] && cmp -s index.html index.html.tmp; then
@@ -42,5 +42,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           
           git add index.html
-          git commit -m "chore: auto-update and replace domain [skip ci]"
+          git commit -m "chore: auto-update and enforce custom domain replace [skip ci]"
           git push
