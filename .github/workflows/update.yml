@@ -18,26 +18,46 @@ jobs:
 
       - name: Fetch, Validate and Remove Obfuscated Redirect
         run: |
-          # 1. 下载远程最新文件（-f 遇 4xx/5xx 报错直接返回非 0）
-          if ! curl -sLf "https://bestcf.pages.dev/index.html" -o index.html.tmp; then
-            echo "错误：下载远程文件失败（网络问题或源站异常），取消覆写。"
-            rm -f index.html.tmp
-            echo "HAS_CHANGES=false" >> $GITHUB_ENV
-            exit 0
-          fi
+          # 1. 定义源站主地址与备用地址列表
+          URLS=(
+            "https://bestcf.pages.dev/index.html"
+            "https://bestcf.eu.cc/index.html"
+          )
 
-          # 2. 检查文件是否为空
-          if [ ! -s index.html.tmp ]; then
-            echo "错误：下载的文件为空，取消覆写。"
-            rm -f index.html.tmp
-            echo "HAS_CHANGES=false" >> $GITHUB_ENV
-            exit 0
-          fi
+          FETCH_SUCCESS=false
 
-          # 3. 校验关键内容特征（防伪装页/被篡改/被替换）
-          if ! grep -q -i "Cloudflare EDT" index.html.tmp; then
-            echo "警告：远程页面内容不符合特征（可能已变成伪装页或删除了原项目内容），取消覆写！"
-            rm -f index.html.tmp
+          # 2. 轮询尝试下载与多重校验
+          for url in "${URLS[@]}"; do
+            echo "正在尝试从 $url 下载..."
+            
+            # 下载文件
+            if curl -sLf "$url" -o index.html.tmp; then
+              # 检查是否为空文件
+              if [ ! -s index.html.tmp ]; then
+                echo "警告：从 $url 下载的文件为空，尝试下一个..."
+                rm -f index.html.tmp
+                continue
+              fi
+
+              # 校验关键内容特征（防伪装页/被篡改/被替换）
+              if ! grep -q -i "Cloudflare EDT" index.html.tmp; then
+                echo "警告：从 $url 获取的内容不符合特征（可能已变成伪装页），尝试下一个..."
+                rm -f index.html.tmp
+                continue
+              fi
+
+              echo "成功从 $url 获取并校验有效内容！"
+              FETCH_SUCCESS=true
+              break
+            else
+              echo "从 $url 下载失败（网络问题或 4xx/5xx），尝试下一个..."
+              rm -f index.html.tmp
+            fi
+          done
+
+          # 3. 如果所有地址均失败，安全退出
+          if [ "$FETCH_SUCCESS" = false ]; then
+            echo "错误：所有源站地址均无法获取有效内容，取消覆写。"
             echo "HAS_CHANGES=false" >> $GITHUB_ENV
             exit 0
           fi
