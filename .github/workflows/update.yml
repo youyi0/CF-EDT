@@ -42,5 +42,5 @@ jobs:
           git config --local user.name "github-actions[bot]"
           
           git add index.html
-          git commit -m "chore: auto-update and delete redirect script [skip ci]"
+          git commit -m "chore: auto-update and delete redirect script"
           git push
