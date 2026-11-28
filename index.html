@@ -4605,14 +4605,18 @@
         </section>	
 		
         <footer>
-            <span class="tips">Cloudflare EDT All in
-                One<br>内容来自网络，免费使用，不提供节点<br>仅用于技术研究，24小时后请删除，禁止它用<br>
-				不要将本站分享到国内，可以私信给最要好的盆友<br>
-                备用网址 BestCF.eu.cc</span><br>
+            <span class="tips">
+                Cloudflare EDT All in One<br>
+                内容来自网络，免费使用，不提供节点<br>
+                仅用于技术研究，24小时后请删除，禁止它用<br>
+                不要将本站分享到国内，可以私信给最要好的盆友<br>
+                主站地址：<a href="https://bestcf.pages.dev/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">bestcf.pages.dev</a> ｜ 
+                备用网址：<a href="https://BestCF.eu.cc" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">BestCF.eu.cc</a>
+            </span><br>
             <a href="report/" class="footer-button" target="_blank">投稿 / 反馈 / 失效 / 纠错</a>
-			<!-- <br><br> -->
+            <!-- <br><br> -->
             <!-- <a href="https://www.youtube.com/@zhenxiangdinglv/posts" class="footer-button" target="_blank">交流讨论</a> -->
-				<br><br><br><br>
+            <br><br><br><br>
         </footer>
 
     </div>
@@ -4665,5 +4669,52 @@ document.addEventListener("DOMContentLoaded",async()=>{const t=document.getEleme
 </script>
 <!-- Analysis -->
 <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-');</script> --><!--<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7e1b43291202481fa1859f9f681eb5ef"}'></script> -->
+<script>
+function copy(btn, text) {
+    // 1. 优先使用现代 Clipboard API（需要 HTTPS 或 localhost）
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+            showCopiedFeedback(btn);
+        }).catch(() => {
+            fallbackCopy(btn, text);
+        });
+    } else {
+        // 2. 降级方案：适配 HTTP、本地文件(file://)或部分内嵌浏览器
+        fallbackCopy(btn, text);
+    }
+}
+
+function fallbackCopy(btn, text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    // 防止在移动端弹出键盘或引起页面滚动
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    textarea.style.top = '0';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showCopiedFeedback(btn);
+        } else {
+            alert('复制失败，请手动长按或选中链接复制');
+        }
+    } catch (err) {
+        alert('复制失败，请手动复制');
+    }
+    document.body.removeChild(textarea);
+}
+
+function showCopiedFeedback(btn) {
+    const originalText = btn.innerText;
+    btn.innerText = '已复制';
+    setTimeout(() => {
+        btn.innerText = originalText;
+    }, 1500);
+}
+</script>
 <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "91d54db1e2fa4db3b387bd339f56edf9"}'></script><!-- Cloudflare Pages Analytics --></body>
 </html>
